@@ -1,0 +1,1951 @@
+{
+  "conditions": {
+    "split": "test",
+    "query": "original question",
+    "context": "pack_context(top-3, 4000 chars)",
+    "strategy": "B"
+  },
+  "traces": {
+    "dense": [
+      {
+        "query_id": "t01",
+        "type": "conditional",
+        "question": "Công ty muốn đơn phương chấm dứt hợp đồng lao động không xác định thời hạn với một nhân viên thường xuyên không hoàn thành công việc. Công ty phải báo trước ít nhất bao nhiêu ngày?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          36
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art035",
+            "article": 35,
+            "score": 0.8397977602421574,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art031",
+            "article": 31,
+            "score": 0.7814204227077723,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art205",
+            "article": 205,
+            "score": 0.7365740537643433,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art045",
+            "article": 45,
+            "score": 0.731090946858583,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art048",
+            "article": 48,
+            "score": 0.7237191796302795,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art038",
+            "article": 38,
+            "score": 0.7039312543828056,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art128",
+            "article": 128,
+            "score": 0.7038318867883867,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art020",
+            "article": 20,
+            "score": 0.7001770377370213,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 0.6880612578410288,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art109",
+            "article": 109,
+            "score": 0.6872894354290119,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": false,
+        "hit@10": false,
+        "full_coverage_rank": null,
+        "groups_covered@3": 0,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art035",
+          "BLLD_45_2019_QH14#B#art031",
+          "BLLD_45_2019_QH14#B#art205"
+        ],
+        "context_chars": 2716,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 184.9
+      },
+      {
+        "query_id": "t02",
+        "type": "paraphrase",
+        "question": "Nghỉ việc sau nhiều năm làm cho một công ty, cứ mỗi năm làm việc người lao động được trả trợ cấp thôi việc bằng bao nhiêu tháng lương?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          46
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art097",
+            "article": 97,
+            "score": 0.778250671081228,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 0.7551760223402977,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 0.7339987317324453,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 0.704500675201421,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art101",
+            "article": 101,
+            "score": 0.6931155323982288,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 0.657616059255124,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art040",
+            "article": 40,
+            "score": 0.6575976610183762,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art099",
+            "article": 99,
+            "score": 0.6553486585617112,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art102",
+            "article": 102,
+            "score": 0.654409369563499,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art090",
+            "article": 90,
+            "score": 0.6492681116301958,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 4,
+        "groups_covered@3": 0,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art097",
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art113"
+        ],
+        "context_chars": 3761,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 67.1
+      },
+      {
+        "query_id": "t03",
+        "type": "conditional",
+        "question": "Người lao động làm ca đêm từ 06 giờ trở lên được nghỉ giữa giờ ít nhất bao lâu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          109
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art106",
+            "article": 106,
+            "score": 0.8464307005918876,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art109",
+            "article": 109,
+            "score": 0.8425608026218209,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art110",
+            "article": 110,
+            "score": 0.7708516350642337,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art111",
+            "article": 111,
+            "score": 0.7523618564713558,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art105",
+            "article": 105,
+            "score": 0.7144058559657892,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art098",
+            "article": 98,
+            "score": 0.7080179663901918,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art107",
+            "article": 107,
+            "score": 0.6792692935684561,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art205",
+            "article": 205,
+            "score": 0.671285053231867,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art031",
+            "article": 31,
+            "score": 0.6709196367585795,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art128",
+            "article": 128,
+            "score": 0.6560508618309396,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 2,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art106",
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art110"
+        ],
+        "context_chars": 1001,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 73.5
+      },
+      {
+        "query_id": "t04",
+        "type": "direct",
+        "question": "Người chưa đủ 15 tuổi được làm việc tối đa bao nhiêu giờ mỗi ngày và mỗi tuần?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          146
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art146",
+            "article": 146,
+            "score": 0.7623362995586588,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art145",
+            "article": 145,
+            "score": 0.7014849185943604,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 0.6781719326972961,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art143",
+            "article": 143,
+            "score": 0.6750390127277974,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art147",
+            "article": 147,
+            "score": 0.6715676784515381,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art105",
+            "article": 105,
+            "score": 0.6559805870056152,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art114",
+            "article": 114,
+            "score": 0.6492353886821646,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art097",
+            "article": 97,
+            "score": 0.6250037737191851,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art098",
+            "article": 98,
+            "score": 0.6218515634536743,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art111",
+            "article": 111,
+            "score": 0.606991171836853,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art146",
+          "BLLD_45_2019_QH14#B#art145",
+          "BLLD_45_2019_QH14#B#art113"
+        ],
+        "context_chars": 3536,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 68.2
+      },
+      {
+        "query_id": "t05",
+        "type": "paraphrase",
+        "question": "Người lao động muốn khởi kiện ra Tòa án về tranh chấp lao động cá nhân thì thời hiệu là bao lâu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          190
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art190",
+            "article": 190,
+            "score": 0.7950748923376281,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art194",
+            "article": 194,
+            "score": 0.7097128552711878,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art050",
+            "article": 50,
+            "score": 0.6492534101899373,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art035",
+            "article": 35,
+            "score": 0.6491406962531624,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art031",
+            "article": 31,
+            "score": 0.6472967091445078,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art123",
+            "article": 123,
+            "score": 0.6468962641420218,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art018",
+            "article": 18,
+            "score": 0.6365654089113838,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art040",
+            "article": 40,
+            "score": 0.6254510879516646,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art025",
+            "article": 25,
+            "score": 0.6172877182192982,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art121",
+            "article": 121,
+            "score": 0.6162890285928805,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art190",
+          "BLLD_45_2019_QH14#B#art194",
+          "BLLD_45_2019_QH14#B#art050"
+        ],
+        "context_chars": 2171,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 49.9
+      },
+      {
+        "query_id": "t06",
+        "type": "metadata_filter",
+        "question": "Đình công bị cấm ở những nơi sử dụng lao động nào?",
+        "filter": {
+          "chapter_roman": "XIV"
+        },
+        "n_groups": 1,
+        "gold_articles": [
+          209
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art209",
+            "article": 209,
+            "score": 0.7600510120391846,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art207",
+            "article": 207,
+            "score": 0.7142860463687166,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art208",
+            "article": 208,
+            "score": 0.7112672924995422,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art204",
+            "article": 204,
+            "score": 0.6872365661122474,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art199",
+            "article": 199,
+            "score": 0.6848356535932824,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art179",
+            "article": 179,
+            "score": 0.6485452651977539,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art206",
+            "article": 206,
+            "score": 0.6239204259013666,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art198",
+            "article": 198,
+            "score": 0.6132527772561546,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art186",
+            "article": 186,
+            "score": 0.5911219716072083,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art201",
+            "article": 201,
+            "score": 0.5815765261650085,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art209",
+          "BLLD_45_2019_QH14#B#art207",
+          "BLLD_45_2019_QH14#B#art208"
+        ],
+        "context_chars": 1846,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 52.1
+      },
+      {
+        "query_id": "t07",
+        "type": "cross_reference",
+        "question": "Khi đủ tuổi nghỉ hưu, người lao động cần có ít nhất bao nhiêu năm đóng bảo hiểm xã hội để được hưởng lương hưu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          219
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art169",
+            "article": 169,
+            "score": 0.8698139190673828,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art149",
+            "article": 149,
+            "score": 0.6891284770292964,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art168",
+            "article": 168,
+            "score": 0.655588884818223,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 0.6188869845203759,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art148",
+            "article": 148,
+            "score": 0.5947917103767395,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art102",
+            "article": 102,
+            "score": 0.5393825173377991,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 0.5348204374313354,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art114",
+            "article": 114,
+            "score": 0.5345813909422532,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 0.5271916389465332,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art155",
+            "article": 155,
+            "score": 0.5224265171543677,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": false,
+        "hit@10": false,
+        "full_coverage_rank": null,
+        "groups_covered@3": 0,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art149",
+          "BLLD_45_2019_QH14#B#art168"
+        ],
+        "context_chars": 3606,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 47.4
+      },
+      {
+        "query_id": "tm01",
+        "type": "multi_hop",
+        "question": "Thử việc cho vị trí cần trình độ chuyên môn từ cao đẳng trở lên được kéo dài tối đa bao lâu, và lương thử việc tối thiểu bằng bao nhiêu phần trăm lương của công việc đó?",
+        "filter": null,
+        "n_groups": 2,
+        "gold_articles": [
+          25,
+          26
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art025",
+            "article": 25,
+            "score": 0.639817476272583,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art124",
+            "article": 124,
+            "score": 0.5365600266122812,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art155",
+            "article": 155,
+            "score": 0.5298945623573409,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art026",
+            "article": 26,
+            "score": 0.5238763093948364,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art097",
+            "article": 97,
+            "score": 0.5038074405135944,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 0.5019073486328125,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art062",
+            "article": 62,
+            "score": 0.49661630371906273,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art048",
+            "article": 48,
+            "score": 0.4918031692504883,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art121",
+            "article": 121,
+            "score": 0.488783718492545,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 0.48781493306159973,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 4,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art025",
+          "BLLD_45_2019_QH14#B#art124",
+          "BLLD_45_2019_QH14#B#art155"
+        ],
+        "context_chars": 1256,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 70.4
+      },
+      {
+        "query_id": "tm02",
+        "type": "multi_hop",
+        "question": "Khi bị mất việc làm, trợ cấp mất việc làm của người lao động được tính thế nào, và sau khi chấm dứt hợp đồng hai bên phải thanh toán đầy đủ các khoản tiền trong thời hạn bao lâu?",
+        "filter": null,
+        "n_groups": 2,
+        "gold_articles": [
+          47,
+          48
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art048",
+            "article": 48,
+            "score": 0.8076148273830068,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art040",
+            "article": 40,
+            "score": 0.7845635519531569,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 0.7838985195099425,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 0.7689556112574226,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 0.7428584762983155,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art101",
+            "article": 101,
+            "score": 0.7316151319398108,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art045",
+            "article": 45,
+            "score": 0.7016922862850686,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art096",
+            "article": 96,
+            "score": 0.6983980148553259,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art162",
+            "article": 162,
+            "score": 0.6923815997725276,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art099",
+            "article": 99,
+            "score": 0.6829178943858651,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 4,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art048",
+          "BLLD_45_2019_QH14#B#art040",
+          "BLLD_45_2019_QH14#B#art041"
+        ],
+        "context_chars": 3654,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 68.1
+      }
+    ],
+    "bm25": [
+      {
+        "query_id": "t01",
+        "type": "conditional",
+        "question": "Công ty muốn đơn phương chấm dứt hợp đồng lao động không xác định thời hạn với một nhân viên thường xuyên không hoàn thành công việc. Công ty phải báo trước ít nhất bao nhiêu ngày?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          36
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art036",
+            "article": 36,
+            "score": 43.8006,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art035",
+            "article": 35,
+            "score": 38.8028,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 38.2157,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art040",
+            "article": 40,
+            "score": 30.4421,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art162",
+            "article": 162,
+            "score": 29.5549,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art177",
+            "article": 177,
+            "score": 26.1587,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art038",
+            "article": 38,
+            "score": 26.0599,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art154",
+            "article": 154,
+            "score": 25.6476,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art201",
+            "article": 201,
+            "score": 25.1705,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art188",
+            "article": 188,
+            "score": 25.1661,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art036"
+        ],
+        "context_chars": 2752,
+        "dropped_by_budget": [
+          "BLLD_45_2019_QH14#B#art035",
+          "BLLD_45_2019_QH14#B#art041"
+        ],
+        "context_evidence": true,
+        "ms": 2.9
+      },
+      {
+        "query_id": "t02",
+        "type": "paraphrase",
+        "question": "Nghỉ việc sau nhiều năm làm cho một công ty, cứ mỗi năm làm việc người lao động được trả trợ cấp thôi việc bằng bao nhiêu tháng lương?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          46
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 33.3631,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 31.7095,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 30.9019,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 25.1978,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art169",
+            "article": 169,
+            "score": 24.3848,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art139",
+            "article": 139,
+            "score": 22.5689,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art114",
+            "article": 114,
+            "score": 21.6168,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art097",
+            "article": 97,
+            "score": 21.5953,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art101",
+            "article": 101,
+            "score": 21.1972,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art219",
+            "article": 219,
+            "score": 20.4295,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 3,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art113",
+          "BLLD_45_2019_QH14#B#art046"
+        ],
+        "context_chars": 3666,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 2.4
+      },
+      {
+        "query_id": "t03",
+        "type": "conditional",
+        "question": "Người lao động làm ca đêm từ 06 giờ trở lên được nghỉ giữa giờ ít nhất bao lâu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          109
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art109",
+            "article": 109,
+            "score": 45.9996,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art110",
+            "article": 110,
+            "score": 25.5804,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art098",
+            "article": 98,
+            "score": 23.0589,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art106",
+            "article": 106,
+            "score": 21.6845,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art067",
+            "article": 67,
+            "score": 18.6849,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art139",
+            "article": 139,
+            "score": 17.702,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art146",
+            "article": 146,
+            "score": 17.0433,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art160",
+            "article": 160,
+            "score": 16.3732,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art097",
+            "article": 97,
+            "score": 15.8821,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art111",
+            "article": 111,
+            "score": 15.8526,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art110",
+          "BLLD_45_2019_QH14#B#art098"
+        ],
+        "context_chars": 1895,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 1.7
+      },
+      {
+        "query_id": "t04",
+        "type": "direct",
+        "question": "Người chưa đủ 15 tuổi được làm việc tối đa bao nhiêu giờ mỗi ngày và mỗi tuần?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          146
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art146",
+            "article": 146,
+            "score": 29.8652,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art145",
+            "article": 145,
+            "score": 20.4899,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art143",
+            "article": 143,
+            "score": 19.0134,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art111",
+            "article": 111,
+            "score": 18.4497,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art219",
+            "article": 219,
+            "score": 18.265,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art147",
+            "article": 147,
+            "score": 16.4812,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art137",
+            "article": 137,
+            "score": 16.384,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 15.0971,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art079",
+            "article": 79,
+            "score": 15.0313,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art098",
+            "article": 98,
+            "score": 14.5983,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art146",
+          "BLLD_45_2019_QH14#B#art145",
+          "BLLD_45_2019_QH14#B#art143"
+        ],
+        "context_chars": 2456,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 1.4
+      },
+      {
+        "query_id": "t05",
+        "type": "paraphrase",
+        "question": "Người lao động muốn khởi kiện ra Tòa án về tranh chấp lao động cá nhân thì thời hiệu là bao lâu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          190
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art190",
+            "article": 190,
+            "score": 29.895,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art194",
+            "article": 194,
+            "score": 23.1579,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art189",
+            "article": 189,
+            "score": 22.1013,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art191",
+            "article": 191,
+            "score": 21.9945,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art187",
+            "article": 187,
+            "score": 21.9267,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art193",
+            "article": 193,
+            "score": 18.6345,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art188",
+            "article": 188,
+            "score": 18.3962,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art034",
+            "article": 34,
+            "score": 17.5236,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art219",
+            "article": 219,
+            "score": 16.4105,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art203",
+            "article": 203,
+            "score": 15.3194,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": true,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 1,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art190",
+          "BLLD_45_2019_QH14#B#art194",
+          "BLLD_45_2019_QH14#B#art189"
+        ],
+        "context_chars": 3270,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 1.8
+      },
+      {
+        "query_id": "t06",
+        "type": "metadata_filter",
+        "question": "Đình công bị cấm ở những nơi sử dụng lao động nào?",
+        "filter": {
+          "chapter_roman": "XIV"
+        },
+        "n_groups": 1,
+        "gold_articles": [
+          209
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art208",
+            "article": 208,
+            "score": 15.3772,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art209",
+            "article": 209,
+            "score": 12.1792,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art206",
+            "article": 206,
+            "score": 11.1993,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art186",
+            "article": 186,
+            "score": 8.0091,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art205",
+            "article": 205,
+            "score": 7.3405,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art203",
+            "article": 203,
+            "score": 7.2192,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art202",
+            "article": 202,
+            "score": 6.1033,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art201",
+            "article": 201,
+            "score": 5.6973,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art200",
+            "article": 200,
+            "score": 4.9238,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art204",
+            "article": 204,
+            "score": 4.8454,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 2,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art208",
+          "BLLD_45_2019_QH14#B#art209",
+          "BLLD_45_2019_QH14#B#art206"
+        ],
+        "context_chars": 1552,
+        "dropped_by_budget": [],
+        "context_evidence": true,
+        "ms": 0.5
+      },
+      {
+        "query_id": "t07",
+        "type": "cross_reference",
+        "question": "Khi đủ tuổi nghỉ hưu, người lao động cần có ít nhất bao nhiêu năm đóng bảo hiểm xã hội để được hưởng lương hưu?",
+        "filter": null,
+        "n_groups": 1,
+        "gold_articles": [
+          219
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art169",
+            "article": 169,
+            "score": 42.4557,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art219",
+            "article": 219,
+            "score": 41.7331,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art149",
+            "article": 149,
+            "score": 27.9841,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 25.3805,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art139",
+            "article": 139,
+            "score": 24.4721,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art035",
+            "article": 35,
+            "score": 24.2552,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art168",
+            "article": 168,
+            "score": 21.5581,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 18.4457,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 18.3953,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art145",
+            "article": 145,
+            "score": 18.0967,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 2,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art149"
+        ],
+        "context_chars": 2470,
+        "dropped_by_budget": [
+          "BLLD_45_2019_QH14#B#art219"
+        ],
+        "context_evidence": false,
+        "ms": 2.1
+      },
+      {
+        "query_id": "tm01",
+        "type": "multi_hop",
+        "question": "Thử việc cho vị trí cần trình độ chuyên môn từ cao đẳng trở lên được kéo dài tối đa bao lâu, và lương thử việc tối thiểu bằng bao nhiêu phần trăm lương của công việc đó?",
+        "filter": null,
+        "n_groups": 2,
+        "gold_articles": [
+          25,
+          26
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art025",
+            "article": 25,
+            "score": 42.5756,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art090",
+            "article": 90,
+            "score": 28.7376,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art099",
+            "article": 99,
+            "score": 28.1344,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art026",
+            "article": 26,
+            "score": 27.0503,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art101",
+            "article": 101,
+            "score": 26.9929,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art091",
+            "article": 91,
+            "score": 26.5348,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art152",
+            "article": 152,
+            "score": 25.3167,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art185",
+            "article": 185,
+            "score": 24.1864,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art219",
+            "article": 219,
+            "score": 24.1361,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art092",
+            "article": 92,
+            "score": 23.7681,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": false,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 4,
+        "groups_covered@3": 1,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art025",
+          "BLLD_45_2019_QH14#B#art090",
+          "BLLD_45_2019_QH14#B#art099"
+        ],
+        "context_chars": 2450,
+        "dropped_by_budget": [],
+        "context_evidence": false,
+        "ms": 2.1
+      },
+      {
+        "query_id": "tm02",
+        "type": "multi_hop",
+        "question": "Khi bị mất việc làm, trợ cấp mất việc làm của người lao động được tính thế nào, và sau khi chấm dứt hợp đồng hai bên phải thanh toán đầy đủ các khoản tiền trong thời hạn bao lâu?",
+        "filter": null,
+        "n_groups": 2,
+        "gold_articles": [
+          47,
+          48
+        ],
+        "results": [
+          {
+            "rank": 1,
+            "id": "BLLD_45_2019_QH14#B#art048",
+            "article": 48,
+            "score": 40.6253,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 2,
+            "id": "BLLD_45_2019_QH14#B#art041",
+            "article": 41,
+            "score": 35.2099,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 3,
+            "id": "BLLD_45_2019_QH14#B#art047",
+            "article": 47,
+            "score": 35.092,
+            "components": null,
+            "hit": true
+          },
+          {
+            "rank": 4,
+            "id": "BLLD_45_2019_QH14#B#art046",
+            "article": 46,
+            "score": 33.325,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 5,
+            "id": "BLLD_45_2019_QH14#B#art113",
+            "article": 113,
+            "score": 29.25,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 6,
+            "id": "BLLD_45_2019_QH14#B#art034",
+            "article": 34,
+            "score": 28.3278,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 7,
+            "id": "BLLD_45_2019_QH14#B#art137",
+            "article": 137,
+            "score": 26.8237,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 8,
+            "id": "BLLD_45_2019_QH14#B#art062",
+            "article": 62,
+            "score": 25.6145,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 9,
+            "id": "BLLD_45_2019_QH14#B#art020",
+            "article": 20,
+            "score": 25.4081,
+            "components": null,
+            "hit": false
+          },
+          {
+            "rank": 10,
+            "id": "BLLD_45_2019_QH14#B#art162",
+            "article": 162,
+            "score": 24.4998,
+            "components": null,
+            "hit": false
+          }
+        ],
+        "hit@1": false,
+        "hit@3": true,
+        "hit@5": true,
+        "hit@10": true,
+        "full_coverage_rank": 3,
+        "groups_covered@3": 2,
+        "context_ids": [
+          "BLLD_45_2019_QH14#B#art048",
+          "BLLD_45_2019_QH14#B#art041"
+        ],
+        "context_chars": 3163,
+        "dropped_by_budget": [
+          "BLLD_45_2019_QH14#B#art047"
+        ],
+        "context_evidence": false,
+        "ms": 2.4
+      }
+    ]
+  }
+}

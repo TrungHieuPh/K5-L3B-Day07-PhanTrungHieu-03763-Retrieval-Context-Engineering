@@ -1,0 +1,296 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q19",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q20",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q21",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q23",
+    "split": "dev",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q24",
+    "split": "dev",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q25",
+    "split": "dev",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q26",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q27",
+    "split": "dev",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "dm01",
+    "split": "dev",
+    "type": "multi_hop",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "dm02",
+    "split": "dev",
+    "type": "multi_hop",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "du01",
+    "split": "dev",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "du02",
+    "split": "dev",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "du03",
+    "split": "dev",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "type": "conditional",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t06",
+    "split": "test",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t07",
+    "split": "test",
+    "type": "cross_reference",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "tm01",
+    "split": "test",
+    "type": "multi_hop",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "tm02",
+    "split": "test",
+    "type": "multi_hop",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "tu01",
+    "split": "test",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "tu02",
+    "split": "test",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "tu03",
+    "split": "test",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  }
+]

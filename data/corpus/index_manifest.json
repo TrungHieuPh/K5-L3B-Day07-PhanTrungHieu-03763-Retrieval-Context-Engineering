@@ -1,0 +1,57 @@
+{
+  "exported_at_utc": "2026-11-16T02:37:31+00:00",
+  "source": {
+    "source_id": "BLLD_45_2019_QH14",
+    "file": "bo_luat_lao_dong_45_2019_QH14.pdf",
+    "sha256": "3c865f3d92ba23604e316360b902297ddbc0d1c394d3c08a466029a9d43b5b6c",
+    "physical_pages": 94,
+    "content_pages": 93,
+    "manifest": "Day 6 starter/data/manifest.json"
+  },
+  "vector_store": {
+    "engine": "PostgreSQL + pgvector (Day 6 Docker, 127.0.0.1:55433)",
+    "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector": "0.8.7",
+    "table": "chunks",
+    "key": "(strategy, chunk_id)",
+    "distance": "cosine (<=>), score = 1 - distance"
+  },
+  "embedding": {
+    "provider": "local (sentence-transformers, CPU)",
+    "model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "dimensions": 384,
+    "max_seq_length_tokens": 128,
+    "normalize_embeddings": true,
+    "query_document_handling": "same encoder, no prefix, for queries and documents"
+  },
+  "day6_selected_strategy": "B",
+  "strategies": {
+    "A": {
+      "label": "fixed_size(500,50)",
+      "n_chunks": 421,
+      "embedding_dims": 384,
+      "file": "chunks_A.json",
+      "text_aligned_with_pages": true
+    },
+    "B": {
+      "label": "by_article",
+      "n_chunks": 220,
+      "embedding_dims": 384,
+      "file": "chunks_B.json",
+      "text_aligned_with_pages": true
+    },
+    "C": {
+      "label": "by_clause(200,800)",
+      "n_chunks": 554,
+      "embedding_dims": 384,
+      "file": "chunks_C.json",
+      "text_aligned_with_pages": true
+    }
+  },
+  "files_sha256": {
+    "pages.json": "125c9e21f51e00b4b0bf7586d35161189ce8749005433ef3a48c115041784ae2",
+    "chunks_A.json": "6dd69f71403aab70221028f151c8d20f9e2a9ab09762085014bcaa09c657fe44",
+    "chunks_B.json": "39446d82732d1be30ada42f26a0d3934dc8ad6191ed62b472884c4ceb4b178ee",
+    "chunks_C.json": "96727e6de081bd6dcc22dad85e61f1a652acdc497a47331386d076b6ff930848"
+  }
+}

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic RAG Demo</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6778; --line: #dfe3ea;
+    --accent: #2457c5; --accent-soft: #e6edfb; --ok: #1d7a46; --ok-soft: #e3f4ea;
+    --warn: #9a5b00; --warn-soft: #fbefd9; --err: #b42318; --err-soft: #fde7e5; --code: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --panel: #1b2029; --text: #e5e9f0; --muted: #9aa4b5; --line: #2c3340;
+      --accent: #7ea6ff; --accent-soft: #1f2c4a; --ok: #5fd08f; --ok-soft: #173326;
+      --warn: #f2b45a; --warn-soft: #3a2c14; --err: #ff8a80; --err-soft: #3d1c1a; --code: #232a35;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  textarea, select, input { width: 100%; font: inherit; color: var(--text); background: var(--bg);
+         border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  textarea { min-height: 70px; resize: vertical; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .row { display: flex; gap: 12px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+  button { font: inherit; font-weight: 600; background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+           padding: 9px 18px; cursor: pointer; }
+  @media (prefers-color-scheme: dark) { button { color: #0d1117; } }
+  button:disabled { opacity: .55; cursor: wait; }
+  .hint { color: var(--muted); font-size: 13px; }
+  .badge { display: inline-block; font-weight: 700; font-size: 13px; padding: 2px 10px; border-radius: 99px; }
+  .answered { background: var(--ok-soft); color: var(--ok); }
+  .abstain { background: var(--warn-soft); color: var(--warn); }
+  .error { background: var(--err-soft); color: var(--err); }
+  .metrics { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .answer { white-space: pre-wrap; margin: 12px 0 0; font-size: 16px; }
+  a.cite { display: inline-block; background: var(--accent-soft); color: var(--accent); text-decoration: none;
+           border-radius: 6px; padding: 0 6px; font-size: 13px; font-weight: 600; margin: 0 1px; }
+  h2 { font-size: 16px; margin: 0 0 10px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps > li { margin-bottom: 14px; }
+  .tool { font-weight: 700; }
+  .q { font-family: ui-monospace, Consolas, monospace; background: var(--code); padding: 1px 6px; border-radius: 4px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 6px; font-size: 13px; }
+  th, td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .yes { color: var(--ok); font-weight: 600; } .no { color: var(--muted); }
+  .tablewrap { overflow-x: auto; }
+  pre { white-space: pre-wrap; word-break: break-word; background: var(--code); padding: 10px; border-radius: 8px;
+        font-size: 13px; margin: 6px 0 0; max-height: 420px; overflow: auto; }
+  details > summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+  .muted { color: var(--muted); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Agentic RAG — Bộ luật Lao động 45/2019/QH14</h1>
+  <p class="sub" id="sub">Agent tự quyết định search / answer / abstain. Trang này chạy đúng đường code của benchmark.</p>
+
+  <div class="panel">
+    <label for="example">Câu hỏi mẫu (chỉ tập DEV — không có đáp án)</label>
+    <select id="example"><option value="">— tự gõ câu hỏi —</option></select>
+
+    <label for="question" style="margin-top:12px">Câu hỏi</label>
+    <textarea id="question" placeholder="Ví dụ: Giờ làm việc ban đêm tính từ mấy giờ đến mấy giờ?"></textarea>
+
+    <div class="grid">
+      <div><label for="retrieval">Retrieval</label>
+        <select id="retrieval">
+          <option value="dense">dense (pgvector)</option>
+          <option value="bm25">bm25 (từ khóa)</option>
+          <option value="hybrid_rrf">hybrid_rrf (dense + bm25)</option>
+        </select></div>
+      <div><label for="context">Chọn context</label>
+        <select id="context">
+          <option value="starter">starter (cả chunk hoặc bỏ)</option>
+          <option value="excerpt_rr">excerpt_rr (trích đoạn + xoay vòng)</option>
+        </select></div>
+      <div><label for="chapter">Filter chương (La Mã)</label><input id="chapter" placeholder="vd. III"></div>
+      <div><label for="article">Filter điều (số)</label><input id="article" placeholder="vd. 20" inputmode="numeric"></div>
+    </div>
+
+    <div class="row">
+      <button id="ask">Hỏi agent</button>
+      <span class="hint" id="status">Free tier: 5 request/phút — một câu có thể phải chờ tới ~60 giây.</span>
+    </div>
+  </div>
+
+  <div id="result" class="hidden">
+    <div class="panel">
+      <span id="badge" class="badge"></span>
+      <div class="metrics" id="metrics"></div>
+      <div class="answer" id="answer"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Các bước agent đã làm</h2>
+      <ol class="steps" id="steps"></ol>
+    </div>
+
+    <div class="panel" id="citesPanel">
+      <h2>Citation — đoạn luật đúng như model đã nhận</h2>
+      <div id="cites"></div>
+    </div>
+
+    <div class="panel">
+      <details><summary>Toàn bộ CONTEXT cuối cùng gửi cho model</summary><pre id="context-full"></pre></details>
+    </div>
+  </div>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined && text !== null) n.textContent = String(text);
+  return n;
+}
+const shortId = (id, article) => article ? `Điều ${article}` : id.split('#').pop();
+
+async function init() {
+  try {
+    const cfg = await (await fetch('/api/config')).json();
+    $('#sub').textContent = `Model ${cfg.model} · chunk strategy ${cfg.strategy} · top-${cfg.top_k} · ` +
+      `budget ${cfg.budget_chars} ký tự · tối đa ${cfg.max_searches} lần search · ${cfg.rpm} request/phút`;
+    const xs = await (await fetch('/api/examples')).json();
+    const groups = {};
+    xs.forEach((x) => (groups[x.type] = groups[x.type] || []).push(x));
+    const sel = $('#example');
+    Object.entries(groups).forEach(([type, items]) => {
+      const g = document.createElement('optgroup'); g.label = type;
+      items.forEach((x) => { const o = el('option', null, `${x.id} · ${x.question}`); o.value = x.id; g.appendChild(o); });
+      sel.appendChild(g);
+    });
+    sel.addEventListener('change', () => {
+      const x = xs.find((e) => e.id === sel.value);
+      if (!x) return;
+      $('#question').value = x.question;
+      $('#chapter').value = (x.filter && x.filter.chapter_roman) || '';
+      $('#article').value = (x.filter && x.filter.article) || '';
+    });
+  } catch (e) { $('#status').textContent = 'Không kết nối được server demo.'; }
+}
+
+function renderAnswer(text, cites) {
+  const box = $('#answer'); box.replaceChildren();
+  const idx = Object.fromEntries(cites.map((c, i) => [c.id, i]));
+  const re = /\[([^\[\]\s|]+)\]/g;
+  let last = 0, m;
+  while ((m = re.exec(text)) !== null) {
+    box.appendChild(document.createTextNode(text.slice(last, m.index)));
+    const id = m[1];
+    if (id in idx) {
+      const a = el('a', 'cite', shortId(id, cites[idx[id]].article));
+      a.href = `#cite-${idx[id]}`; a.title = id;
+      box.appendChild(a);
+    } else box.appendChild(document.createTextNode(m[0]));
+    last = re.lastIndex;
+  }
+  box.appendChild(document.createTextNode(text.slice(last)));
+}
+
+function renderSteps(steps) {
+  const ol = $('#steps'); ol.replaceChildren();
+  steps.forEach((s) => {
+    const li = el('li');
+    const head = el('div');
+    head.appendChild(el('span', 'tool', s.decision));
+    if (s.query) { head.appendChild(document.createTextNode(' ')); head.appendChild(el('span', 'q', s.query)); }
+    const meta = [`${(s.ms / 1000).toFixed(1)}s`, `${s.tokens} token`];
+    if (s.wait_s > 0) meta.push(`chờ quota ${s.wait_s}s`);
+    if (s.retries.length) meta.push(`retry: ${s.retries.join(', ')}`);
+    if (s.normalized_from) meta.push(`(model gọi ${s.normalized_from}, quy về abstain)`);
+    head.appendChild(el('span', 'muted', `  · ${meta.join(' · ')}`));
+    li.appendChild(head);
+    if (s.reason) li.appendChild(el('div', 'muted', `Lý do: ${s.reason}`));
+    if (s.results) {
+      const wrap = el('div', 'tablewrap'); const t = el('table');
+      const hr = el('tr'); ['rank', 'điều', 'score', 'độ dài', 'vào context?'].forEach((h) => hr.appendChild(el('th', null, h)));
+      t.appendChild(hr);
+      s.results.forEach((r) => {
+        const tr = el('tr');
+        tr.appendChild(el('td', null, r.rank));
+        const td = el('td', null, shortId(r.id, r.article)); td.title = r.id; tr.appendChild(td);
+        tr.appendChild(el('td', null, r.score));
+        tr.appendChild(el('td', null, `${r.chars} ký tự`));
+        let how = r.in_context ? 'có' : 'không (hết budget)';
+        if (r.pack) how = { whole: 'có — cả chunk', excerpt: `có — trích ${r.pack.kept} ký tự`, skipped: 'không (hết budget)' }[r.pack.how] || how;
+        tr.appendChild(el('td', r.in_context ? 'yes' : 'no', how));
+        t.appendChild(tr);
+      });
+      wrap.appendChild(t); li.appendChild(wrap);
+      li.appendChild(el('div', 'muted',
+        `Context sau bước này: ${s.context_articles.map((a, i) => shortId(s.context_ids[i], a)).join(', ') || '(trống)'} — ${s.context_chars} ký tự`));
+    }
+    ol.appendChild(li);
+  });
+}
+
+function render(d) {
+  $('#result').classList.remove('hidden');
+  const badge = $('#badge');
+  badge.className = `badge ${d.status}`;
+  badge.textContent = d.status === 'answered' ? 'ĐÃ TRẢ LỜI' : d.status === 'abstain' ? 'TỪ CHỐI (abstain)' : 'LỖI';
+  const t = d.totals;
+  const m = $('#metrics'); m.replaceChildren();
+  [`${t.model_calls} lần gọi model`, `${t.searches} lần search`,
+   `${t.tokens.prompt_tokens + t.tokens.output_tokens + t.tokens.thinking_tokens} token`,
+   `${t.elapsed_s}s (chờ quota ${t.wait_s}s)`, `retry ${t.retries}`, `$${t.cost_usd} (free tier)`,
+   `${d.config.retrieval} / ${d.config.context}`].forEach((x) => m.appendChild(el('span', null, x)));
+
+  if (d.status === 'error') { $('#answer').textContent = d.error; }
+  else if (d.status === 'abstain') {
+    $('#answer').textContent = d.abstain_reason
+      ? `Agent từ chối: ${d.abstain_reason}`
+      : `Không đủ bằng chứng (${d.run_agent_event}: citation thiếu/không hợp lệ hoặc hết lượt search).`;
+  } else renderAnswer(d.answer, d.citations);
+
+  renderSteps(d.steps);
+  const cites = $('#cites'); cites.replaceChildren();
+  $('#citesPanel').classList.toggle('hidden', !d.citations.length);
+  d.citations.forEach((c, i) => {
+    const box = el('div'); box.id = `cite-${i}`; box.style.marginBottom = '12px';
+    box.appendChild(el('div', 'tool', `${shortId(c.id, c.article)}  ·  ${c.id}`));
+    box.appendChild(el('pre', null, c.text_as_sent));
+    cites.appendChild(box);
+  });
+  $('#context-full').textContent = d.final_context || '(trống)';
+}
+
+async function ask() {
+  const question = $('#question').value.trim();
+  if (!question) { $('#status').textContent = 'Hãy nhập câu hỏi.'; return; }
+  const btn = $('#ask'); btn.disabled = true;
+  const t0 = Date.now();
+  const timer = setInterval(() => { $('#status').textContent = `Agent đang chạy… ${Math.round((Date.now() - t0) / 1000)}s`; }, 500);
+  try {
+    const r = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question, retrieval: $('#retrieval').value, context: $('#context').value,
+                             chapter_roman: $('#chapter').value, article: $('#article').value }) });
+    const d = await r.json();
+    if (!r.ok) { $('#status').textContent = `Lỗi: ${d.error}`; return; }
+    render(d);
+    $('#status').textContent = `Xong sau ${Math.round((Date.now() - t0) / 1000)}s.`;
+  } catch (e) { $('#status').textContent = `Lỗi kết nối: ${e}`; }
+  finally { clearInterval(timer); btn.disabled = false; }
+}
+
+$('#ask').addEventListener('click', ask);
+$('#question').addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) ask(); });
+init();
+</script>
+</body>
+</html>

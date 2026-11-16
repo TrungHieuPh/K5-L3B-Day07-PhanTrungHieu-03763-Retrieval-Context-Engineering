@@ -1,0 +1,1266 @@
+{
+  "items": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 106,
+            "chunk_b": "BLLD_45_2019_QH14#B#art106",
+            "pdf_pages": [
+              44,
+              44
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 139,
+            "chunk_b": "BLLD_45_2019_QH14#B#art139",
+            "pdf_pages": [
+              57,
+              57
+            ],
+            "chapter_roman": "X",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 107,
+            "chunk_b": "BLLD_45_2019_QH14#B#art107",
+            "pdf_pages": [
+              45,
+              45
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 112,
+            "chunk_b": "BLLD_45_2019_QH14#B#art112",
+            "pdf_pages": [
+              46,
+              46
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 113,
+            "chunk_b": "BLLD_45_2019_QH14#B#art113",
+            "pdf_pages": [
+              47,
+              47
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 220,
+            "chunk_b": "BLLD_45_2019_QH14#B#art220",
+            "pdf_pages": [
+              92,
+              92
+            ],
+            "chapter_roman": "XVII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 143,
+            "chunk_b": "BLLD_45_2019_QH14#B#art143",
+            "pdf_pages": [
+              58,
+              58
+            ],
+            "chapter_roman": "XI",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 111,
+            "chunk_b": "BLLD_45_2019_QH14#B#art111",
+            "pdf_pages": [
+              46,
+              46
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 20,
+            "chunk_b": "BLLD_45_2019_QH14#B#art020",
+            "pdf_pages": [
+              9,
+              9
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 169,
+            "chunk_b": "BLLD_45_2019_QH14#B#art169",
+            "pdf_pages": [
+              67,
+              67
+            ],
+            "chapter_roman": "XII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 139,
+            "chunk_b": "BLLD_45_2019_QH14#B#art139",
+            "pdf_pages": [
+              57,
+              57
+            ],
+            "chapter_roman": "X",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 124,
+            "chunk_b": "BLLD_45_2019_QH14#B#art124",
+            "pdf_pages": [
+              51,
+              52
+            ],
+            "chapter_roman": "VIII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 115,
+            "chunk_b": "BLLD_45_2019_QH14#B#art115",
+            "pdf_pages": [
+              48,
+              48
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 20,
+            "chunk_b": "BLLD_45_2019_QH14#B#art020",
+            "pdf_pages": [
+              9,
+              9
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q16",
+      "split": "dev",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 14,
+            "chunk_b": "BLLD_45_2019_QH14#B#art014",
+            "pdf_pages": [
+              7,
+              7
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q17",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 35,
+            "chunk_b": "BLLD_45_2019_QH14#B#art035",
+            "pdf_pages": [
+              16,
+              16
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": false
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q18",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 138,
+            "chunk_b": "BLLD_45_2019_QH14#B#art138",
+            "pdf_pages": [
+              56,
+              56
+            ],
+            "chapter_roman": "X",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q19",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 125,
+            "chunk_b": "BLLD_45_2019_QH14#B#art125",
+            "pdf_pages": [
+              52,
+              52
+            ],
+            "chapter_roman": "VIII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q20",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 169,
+            "chunk_b": "BLLD_45_2019_QH14#B#art169",
+            "pdf_pages": [
+              68,
+              68
+            ],
+            "chapter_roman": "XII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q21",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 107,
+            "chunk_b": "BLLD_45_2019_QH14#B#art107",
+            "pdf_pages": [
+              44,
+              45
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q23",
+      "split": "dev",
+      "type": "metadata_filter",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 125,
+            "chunk_b": "BLLD_45_2019_QH14#B#art125",
+            "pdf_pages": [
+              52,
+              52
+            ],
+            "chapter_roman": "VIII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q24",
+      "split": "dev",
+      "type": "metadata_filter",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 20,
+            "chunk_b": "BLLD_45_2019_QH14#B#art020",
+            "pdf_pages": [
+              9,
+              9
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q25",
+      "split": "dev",
+      "type": "metadata_filter",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 139,
+            "chunk_b": "BLLD_45_2019_QH14#B#art139",
+            "pdf_pages": [
+              57,
+              57
+            ],
+            "chapter_roman": "X",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q26",
+      "split": "dev",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 188,
+            "chunk_b": "BLLD_45_2019_QH14#B#art188",
+            "pdf_pages": [
+              77,
+              77
+            ],
+            "chapter_roman": "XIV",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "q27",
+      "split": "dev",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 188,
+            "chunk_b": "BLLD_45_2019_QH14#B#art188",
+            "pdf_pages": [
+              77,
+              77
+            ],
+            "chapter_roman": "XIV",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": false
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "dm01",
+      "split": "dev",
+      "type": "multi_hop",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 112,
+            "chunk_b": "BLLD_45_2019_QH14#B#art112",
+            "pdf_pages": [
+              46,
+              46
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ],
+        [
+          {
+            "article": 98,
+            "chunk_b": "BLLD_45_2019_QH14#B#art098",
+            "pdf_pages": [
+              42,
+              42
+            ],
+            "chapter_roman": "VI",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "dm02",
+      "split": "dev",
+      "type": "multi_hop",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 123,
+            "chunk_b": "BLLD_45_2019_QH14#B#art123",
+            "pdf_pages": [
+              51,
+              51
+            ],
+            "chapter_roman": "VIII",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": true
+            }
+          }
+        ],
+        [
+          {
+            "article": 128,
+            "chunk_b": "BLLD_45_2019_QH14#B#art128",
+            "pdf_pages": [
+              53,
+              53
+            ],
+            "chapter_roman": "VIII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "du01",
+      "split": "dev",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "vùng i\\b",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "\\d[\\d.,]*\\s*(?:đồng|triệu|nghìn)",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "lương tối thiểu vùng",
+          "n": 1,
+          "matches": [
+            {
+              "page": 53,
+              "article": 129,
+              "snippet": "động gây thiệt hại không nghiêm trọng do sơ suất với giá trị không quá 10 tháng lương tối thiểu vùng do chính phủ công bố được áp dụng tại nơi người lao động làm việc thì người lao"
+            }
+          ]
+        }
+      ],
+      "human_review_required": true
+    },
+    {
+      "id": "du02",
+      "split": "dev",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "trợ cấp thất nghiệp",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "mức hưởng",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "\\d+\\s*%.{0,60}thất nghiệp",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "thất nghiệp.{0,60}\\d+\\s*%",
+          "n": 0,
+          "matches": []
+        }
+      ],
+      "human_review_required": true
+    },
+    {
+      "id": "du03",
+      "split": "dev",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "mức đóng",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "tỷ lệ đóng",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "đóng bảo hiểm xã hội.{0,60}\\d+\\s*%",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "\\d+\\s*%.{0,60}bảo hiểm xã hội",
+          "n": 0,
+          "matches": []
+        }
+      ],
+      "human_review_required": true
+    },
+    {
+      "id": "t01",
+      "split": "test",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 36,
+            "chunk_b": "BLLD_45_2019_QH14#B#art036",
+            "pdf_pages": [
+              17,
+              17
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t02",
+      "split": "test",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 46,
+            "chunk_b": "BLLD_45_2019_QH14#B#art046",
+            "pdf_pages": [
+              21,
+              21
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t03",
+      "split": "test",
+      "type": "conditional",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 109,
+            "chunk_b": "BLLD_45_2019_QH14#B#art109",
+            "pdf_pages": [
+              46,
+              46
+            ],
+            "chapter_roman": "VII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t04",
+      "split": "test",
+      "type": "direct",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 146,
+            "chunk_b": "BLLD_45_2019_QH14#B#art146",
+            "pdf_pages": [
+              59,
+              59
+            ],
+            "chapter_roman": "XI",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t05",
+      "split": "test",
+      "type": "paraphrase",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 190,
+            "chunk_b": "BLLD_45_2019_QH14#B#art190",
+            "pdf_pages": [
+              79,
+              79
+            ],
+            "chapter_roman": "XIV",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t06",
+      "split": "test",
+      "type": "metadata_filter",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 209,
+            "chunk_b": "BLLD_45_2019_QH14#B#art209",
+            "pdf_pages": [
+              86,
+              86
+            ],
+            "chapter_roman": "XIV",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "t07",
+      "split": "test",
+      "type": "cross_reference",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 219,
+            "chunk_b": "BLLD_45_2019_QH14#B#art219",
+            "pdf_pages": [
+              89,
+              89
+            ],
+            "chapter_roman": "XVII",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "tm01",
+      "split": "test",
+      "type": "multi_hop",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 25,
+            "chunk_b": "BLLD_45_2019_QH14#B#art025",
+            "pdf_pages": [
+              11,
+              11
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": true
+            }
+          }
+        ],
+        [
+          {
+            "article": 26,
+            "chunk_b": "BLLD_45_2019_QH14#B#art026",
+            "pdf_pages": [
+              12,
+              12
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "tm02",
+      "split": "test",
+      "type": "multi_hop",
+      "ok": true,
+      "errors": [],
+      "groups": [
+        [
+          {
+            "article": 47,
+            "chunk_b": "BLLD_45_2019_QH14#B#art047",
+            "pdf_pages": [
+              21,
+              21
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": false,
+              "B": true,
+              "C": true
+            }
+          }
+        ],
+        [
+          {
+            "article": 48,
+            "chunk_b": "BLLD_45_2019_QH14#B#art048",
+            "pdf_pages": [
+              22,
+              22
+            ],
+            "chapter_roman": "III",
+            "fits_single_chunk": {
+              "A": true,
+              "B": true,
+              "C": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "id": "tu01",
+      "split": "test",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "thuế thu nhập",
+          "n": 1,
+          "matches": [
+            {
+              "page": 43,
+              "article": 102,
+              "snippet": "ch nộp các khoản bảo hiểm xã hội bắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp, thuế thu nhập cá nhân. điều 103. chế độ nâng lương, nâng bậc, phụ cấp, trợ cấp chế độ nâng lư"
+            }
+          ]
+        },
+        {
+          "pattern": "giảm trừ",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "chịu thuế",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "\\d[\\d.,]*\\s*(?:đồng|triệu)",
+          "n": 0,
+          "matches": []
+        }
+      ],
+      "human_review_required": true
+    },
+    {
+      "id": "tu02",
+      "split": "test",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "phạt tiền",
+          "n": 1,
+          "matches": [
+            {
+              "page": 52,
+              "article": 127,
+              "snippet": "xâm phạm sức khỏe, danh dự, tính mạng, uy tín, nhân phẩm của người lao động. 2. phạt tiền, cắt lương thay việc xử lý kỷ luật lao động. 3. xử lý kỷ luật lao động đối với"
+            }
+          ]
+        },
+        {
+          "pattern": "xử phạt",
+          "n": 2,
+          "matches": [
+            {
+              "page": 88,
+              "article": 217,
+              "snippet": "ịnh của bộ luật này thì tùy theo tính chất, mức độ vi phạm mà bị xử lý kỷ luật, xử phạt vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì"
+            },
+            {
+              "page": 89,
+              "article": 217,
+              "snippet": "gia đình công, người lãnh đạo cuộc đình công thì tùy theo mức độ vi phạm mà bị xử phạt vi phạm hành chính hoặc truy cứu trách nhiệm hình sự, nếu gây thiệt hại thì phả"
+            }
+          ]
+        },
+        {
+          "pattern": "mức phạt",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "\\d[\\d.,]*\\s*(?:đồng|triệu)",
+          "n": 0,
+          "matches": []
+        }
+      ],
+      "human_review_required": true
+    },
+    {
+      "id": "tu03",
+      "split": "test",
+      "type": "unanswerable",
+      "ok": true,
+      "errors": [],
+      "absence_matches": [
+        {
+          "pattern": "mức hưởng",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "chế độ thai sản",
+          "n": 2,
+          "matches": [
+            {
+              "page": 57,
+              "article": 139,
+              "snippet": "ợc nghỉ thêm 01 tháng. 2. trong thời gian nghỉ thai sản, lao động nữ được hưởng chế độ thai sản theo quy định của pháp luật về bảo hiểm xã hội. 3. hết thời gian nghỉ thai sản"
+            },
+            {
+              "page": 57,
+              "article": 139,
+              "snippet": "ang thai hộ và người lao động là người mẹ nhờ mang thai hộ được nghỉ việc hưởng chế độ thai sản theo quy định của pháp luật về bảo hiểm xã hội. điều 140. bảo đảm việc làm cho"
+            }
+          ]
+        },
+        {
+          "pattern": "trợ cấp thai sản",
+          "n": 1,
+          "matches": [
+            {
+              "page": 57,
+              "article": 139,
+              "snippet": "gày làm việc do người sử dụng lao động trả, lao động nữ vẫn tiếp tục được hưởng trợ cấp thai sản theo quy định của pháp luật về bảo hiểm xã hội. 5. lao động nam khi vợ sinh con"
+            }
+          ]
+        },
+        {
+          "pattern": "\\d+\\s*%.{0,80}(?:thai sản|bình quân)",
+          "n": 0,
+          "matches": []
+        },
+        {
+          "pattern": "bình quân tiền lương",
+          "n": 0,
+          "matches": []
+        }
+      ],
+      "human_review_required": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "summary": {
+    "n": 42,
+    "by_split": {
+      "dev": {
+        "answerable": 27,
+        "unanswerable": 3,
+        "multi_hop": 2,
+        "with_filter": 4
+      },
+      "test": {
+        "answerable": 9,
+        "unanswerable": 3,
+        "multi_hop": 2,
+        "with_filter": 1
+      }
+    },
+    "types": {
+      "dev:direct": 11,
+      "dev:paraphrase": 5,
+      "dev:conditional": 6,
+      "dev:metadata_filter": 3,
+      "dev:multi_hop": 2,
+      "dev:unanswerable": 3,
+      "test:conditional": 2,
+      "test:paraphrase": 2,
+      "test:direct": 1,
+      "test:metadata_filter": 1,
+      "test:cross_reference": 1,
+      "test:multi_hop": 2,
+      "test:unanswerable": 3
+    },
+    "gold_articles": {
+      "dev": [
+        14,
+        20,
+        35,
+        98,
+        106,
+        107,
+        111,
+        112,
+        113,
+        115,
+        123,
+        124,
+        125,
+        128,
+        138,
+        139,
+        143,
+        169,
+        188,
+        220
+      ],
+      "test": [
+        25,
+        26,
+        36,
+        46,
+        47,
+        48,
+        109,
+        146,
+        190,
+        209,
+        219
+      ]
+    },
+    "dev_test_article_overlap": []
+  }
+}

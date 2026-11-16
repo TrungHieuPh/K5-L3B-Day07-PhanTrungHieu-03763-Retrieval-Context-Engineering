@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-11-16T12:31:45+07:00",
+  "frozen_before_test": true,
+  "note": "Written BEFORE any agent run on the test split. Config and selection criteria were chosen on dev only (results/step4/agent_dev_summary.json). Test is run once per config; test results are not used to change anything.",
+  "selected": {
+    "name": "bm25_excerpt_B",
+    "command": "python -m src.agent --split test --allow-test --retrieval bm25 --context excerpt_rr --name bm25_excerpt_B --out results/step5",
+    "model": "gemini-3.5-flash-lite",
+    "temperature": 0,
+    "chunking_strategy": "B (by_article, 220 chunks, Day 6 index)",
+    "retrieval": "bm25 (Okapi, k1=1.2, b=0.75)",
+    "top_k": 3,
+    "context_selection": "excerpt_rr (rank-major round robin over searches; cap 1500 chars per chunk; min 300; query-aware excerpt by idf overlap)",
+    "budget_chars": 4000,
+    "max_searches": 4,
+    "prompt": "unchanged from step 2 (src/agent.py SYSTEM prompt)",
+    "run_agent": "starter/agentic.py unchanged (citation check: every citation in context and written as [id] in the answer)"
+  },
+  "baseline": {
+    "name": "baseline_dense_B",
+    "command": "python -m src.agent --split test --allow-test --retrieval dense --context starter --name baseline_dense_B --out results/step5",
+    "difference_from_selected": "retrieval = dense (pgvector, paraphrase-multilingual-MiniLM-L12-v2), context = starter pack_context; everything else identical"
+  },
+  "selection_criteria": [
+    "1. highest Context Evidence Rate on dev (evidence checked on the context text as sent)",
+    "2. lowest false abstention on dev (answerable questions the agent refused)",
+    "3. constraint: abstention on unanswerable dev questions must stay 3/3",
+    "4. tie-break: fewer tokens per question"
+  ],
+  "dev_evidence": {
+    "baseline_dense_B": {"context_evidence": "21/27", "false_abstention": "6/27", "abstention_unanswerable": "3/3", "tokens_per_question": 3579.2},
+    "bm25_B": {"context_evidence": "25/27", "false_abstention": "2/27", "abstention_unanswerable": "3/3", "tokens_per_question": 2857.6},
+    "bm25_excerpt_B": {"context_evidence": "27/27", "false_abstention": "1/27", "abstention_unanswerable": "3/3", "tokens_per_question": 2738.7}
+  },
+  "known_issue_not_fixed": "dev q16: the model wrote two ids in one bracket '[id1, id2]'; run_agent requires '[id]' per citation and rejected a correct answer -> counted as abstain. 1/27 on dev; kept as a documented failure mode (decision A), no prompt change before test.",
+  "file_sha256": {
+    "src/agent.py": "c28e4c15178ec9ff943c7e8d0c9d6f273ec7a084e8e2571ad25524ce3bd049f7",
+    "src/context_pack.py": "4b506934ec5c387f636df25b023fbaf0a48afb2b78647f83f17ddae8710532da",
+    "src/retrievers.py": "149e8fa90006ff5ec6e2ca0830002d838ff8f92569fc84b4e65e646aafc19a77",
+    "src/day6_store.py": "6181860a20c734d47ae22c9cfa195f41cb01a83c2b611f8efcd113e01cd572a8",
+    "starter/agentic.py": "0603f14d618c4c6cdeef297f780e816bfe6c14568e81349e2df3bedec9a85d6d",
+    "starter/baseline.py": "03b8b16c42be7d19c820e506f4cea2a7496c462a00c77d1cfc9e7fc972301fdf",
+    "data/benchmark/questions.json": "6913cf9fde6daf67a8e619f989913b1d84a98f62b8834d9c033917fde483c5c3"
+  },
+  "git_head_at_freeze": "c67ec62 (step work is uncommitted; hashes above identify the exact code)"
+}

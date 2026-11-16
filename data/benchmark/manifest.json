@@ -1,0 +1,113 @@
+{
+  "benchmark_name": "BLLD_45_2019_QH14_day7_v1",
+  "status": "frozen",
+  "frozen_at": "2026-11-16",
+  "approved_by": "học viên 03763",
+  "absence_checks_reviewed": true,
+  "corpus": {
+    "source_id": "BLLD_45_2019_QH14",
+    "pdf_sha256": "3c865f3d92ba23604e316360b902297ddbc0d1c394d3c08a466029a9d43b5b6c",
+    "chunks_sha256": {
+      "pages.json": "125c9e21f51e00b4b0bf7586d35161189ce8749005433ef3a48c115041784ae2",
+      "chunks_A.json": "6dd69f71403aab70221028f151c8d20f9e2a9ab09762085014bcaa09c657fe44",
+      "chunks_B.json": "39446d82732d1be30ada42f26a0d3934dc8ad6191ed62b472884c4ceb4b178ee",
+      "chunks_C.json": "96727e6de081bd6dcc22dad85e61f1a652acdc497a47331386d076b6ff930848"
+    }
+  },
+  "summary": {
+    "n": 42,
+    "by_split": {
+      "dev": {
+        "answerable": 27,
+        "unanswerable": 3,
+        "multi_hop": 2,
+        "with_filter": 4
+      },
+      "test": {
+        "answerable": 9,
+        "unanswerable": 3,
+        "multi_hop": 2,
+        "with_filter": 1
+      }
+    },
+    "types": {
+      "dev:direct": 11,
+      "dev:paraphrase": 5,
+      "dev:conditional": 6,
+      "dev:metadata_filter": 3,
+      "dev:multi_hop": 2,
+      "dev:unanswerable": 3,
+      "test:conditional": 2,
+      "test:paraphrase": 2,
+      "test:direct": 1,
+      "test:metadata_filter": 1,
+      "test:cross_reference": 1,
+      "test:multi_hop": 2,
+      "test:unanswerable": 3
+    },
+    "gold_articles": {
+      "dev": [
+        14,
+        20,
+        35,
+        98,
+        106,
+        107,
+        111,
+        112,
+        113,
+        115,
+        123,
+        124,
+        125,
+        128,
+        138,
+        139,
+        143,
+        169,
+        188,
+        220
+      ],
+      "test": [
+        25,
+        26,
+        36,
+        46,
+        47,
+        48,
+        109,
+        146,
+        190,
+        209,
+        219
+      ]
+    },
+    "dev_test_article_overlap": []
+  },
+  "rules": [
+    "Chọn cấu hình chỉ trên dev; chốt cấu hình và tiêu chí chọn trước khi chạy test.",
+    "Agent và retrieval chỉ nhận `question` và `filter` (filter do người dùng cung cấp); không nhận gold, expected_answer, type, answerable.",
+    "Test là bộ mới soạn ở Day 7 từ các Điều Day 6 chưa hỏi; 5 câu test cũ của Day 6 đã lộ nên chuyển sang dev.",
+    "Câu thiếu evidence không vào mẫu số của retrieval metrics."
+  ],
+  "schema": {
+    "gold": "Câu một bước: danh sách evidence THAY THẾ {source_id, article, page, evidence}; khớp một phần tử là đủ.",
+    "gold_groups": "Câu multi-hop: danh sách NHÓM BẮT BUỘC, mỗi nhóm là danh sách evidence thay thế; phải phủ mọi nhóm.",
+    "article": "Số Điều (đơn vị gold, giữ từ Day 6).",
+    "page": "Trang PDF (1-based) nơi evidence bắt đầu, script tự tính từ pages.json; page_end nếu evidence qua trang.",
+    "filter": "{chapter_roman} do người dùng cung cấp trước khi truy xuất (xem filter_context); không bao giờ là article."
+  },
+  "metric_definitions": {
+    "hit": "Chunk thuộc một Điều gold VÀ chứa trọn evidence sau NFC + lowercase + gộp khoảng trắng (giữ từ Day 6).",
+    "hit@1": "Câu một bước: chunk top-1 là hit.",
+    "evidence_hit@k": "Câu một bước: có ít nhất một hit trong top-k.",
+    "multi_hop_all_groups@k": "Câu multi-hop: mọi nhóm có ít nhất một hit trong tập chunk truy xuất (gộp các lượt search của agent); báo riêng, kèm tỷ lệ nhóm được phủ.",
+    "context_evidence_rate": "Context đã đóng gói (sau budget) chứa evidence của mọi nhóm.",
+    "answer_grade": "0 = không có evidence hoặc sai; 1 = đúng một phần / thiếu điều kiện hoặc nguồn; 2 = đủ ý và citation hỗ trợ. Từ chối câu có đáp án = 0. Xem grading_note từng câu.",
+    "abstention": "Câu thiếu evidence: đúng khi agent đã search rồi từ chối, không bịa con số; nói rõ Bộ luật dẫn chiếu luật khác cũng được tính là từ chối đúng."
+  },
+  "files_sha256": {
+    "questions.json": "6913cf9fde6daf67a8e619f989913b1d84a98f62b8834d9c033917fde483c5c3",
+    "cases.json": "063276c7583ce582c9c024b8899f14fa5a70db525eb1acd5c5eecff6389d0342"
+  }
+}

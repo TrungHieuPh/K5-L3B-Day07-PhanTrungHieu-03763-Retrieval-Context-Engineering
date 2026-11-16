@@ -1,0 +1,14 @@
+# Day 7 — Agentic RAG. Python 3.11+ (reported run: Python 3.14.3, Windows, CPU only).
+#
+# Embedding + vector store must match Day 6 exactly so query vectors are
+# compatible with the stored document vectors: same model, same versions.
+# CPU-only torch wheel:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+psycopg[binary]==3.3.8
+pypdf==6.21.4
+python-dotenv==1.2.4
+numpy==2.5.4
+sentence-transformers==6.3.0
+transformers==5.23.0
+torch==2.15.0
+google-genai==3.3.0

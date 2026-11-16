@@ -1,0 +1,1005 @@
+{
+  "summaries": [
+    {
+      "config": "baseline_dense_B",
+      "settings": {
+        "name": "baseline_dense_B",
+        "model": "gemini-3.5-flash-lite",
+        "strategy": "B",
+        "retrieval": "dense",
+        "top_k": 3,
+        "budget_chars": 4000,
+        "max_searches": 4,
+        "temperature": 0.0,
+        "context": "starter",
+        "cap_chars": 1500
+      },
+      "questions": 12,
+      "status": {
+        "abstain": 5,
+        "answered": 7
+      },
+      "provider_errors": [],
+      "tool_use": {
+        "n": 12,
+        "N": 12,
+        "rate": 1.0
+      },
+      "searches_per_question": {
+        "1": 5,
+        "2": 4,
+        "4": 3
+      },
+      "context_evidence_rate": {
+        "n": 6,
+        "N": 9,
+        "rate": 0.667
+      },
+      "ever_retrieved": {
+        "n": 6,
+        "N": 9,
+        "rate": 0.667
+      },
+      "cited_evidence_proxy": {
+        "n": 5,
+        "N": 9,
+        "rate": 0.556
+      },
+      "false_abstention": {
+        "n": 2,
+        "N": 9,
+        "rate": 0.222
+      },
+      "abstention_unanswerable": {
+        "n": 3,
+        "N": 3,
+        "rate": 1.0
+      },
+      "tokens_total": {
+        "prompt_tokens": 48131,
+        "output_tokens": 2238,
+        "thinking_tokens": 0
+      },
+      "tokens_per_question": 4197.4,
+      "model_calls_total": 37,
+      "active_s_median": 3.9,
+      "wait_s_total": 371.5,
+      "cost_usd": 0.0
+    },
+    {
+      "config": "bm25_excerpt_B",
+      "settings": {
+        "name": "bm25_excerpt_B",
+        "model": "gemini-3.5-flash-lite",
+        "strategy": "B",
+        "retrieval": "bm25",
+        "top_k": 3,
+        "budget_chars": 4000,
+        "max_searches": 4,
+        "temperature": 0.0,
+        "context": "excerpt_rr",
+        "cap_chars": 1500
+      },
+      "questions": 12,
+      "status": {
+        "answered": 9,
+        "abstain": 3
+      },
+      "provider_errors": [],
+      "tool_use": {
+        "n": 12,
+        "N": 12,
+        "rate": 1.0
+      },
+      "searches_per_question": {
+        "1": 7,
+        "2": 3,
+        "3": 1,
+        "4": 1
+      },
+      "context_evidence_rate": {
+        "n": 8,
+        "N": 9,
+        "rate": 0.889
+      },
+      "ever_retrieved": {
+        "n": 9,
+        "N": 9,
+        "rate": 1.0
+      },
+      "cited_evidence_proxy": {
+        "n": 8,
+        "N": 9,
+        "rate": 0.889
+      },
+      "false_abstention": {
+        "n": 0,
+        "N": 9,
+        "rate": 0.0
+      },
+      "abstention_unanswerable": {
+        "n": 3,
+        "N": 3,
+        "rate": 1.0
+      },
+      "tokens_total": {
+        "prompt_tokens": 40495,
+        "output_tokens": 2377,
+        "thinking_tokens": 0
+      },
+      "tokens_per_question": 3572.7,
+      "model_calls_total": 32,
+      "active_s_median": 2.85,
+      "wait_s_total": 326.9,
+      "cost_usd": 0.0
+    }
+  ],
+  "per_question": {
+    "baseline_dense_B": [
+      {
+        "id": "t01",
+        "type": "conditional",
+        "answerable": true,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 4,
+        "queries": [
+          "đơn phương chấm dứt hợp đồng lao động không xác định thời hạn báo trước không hoàn thành công việc",
+          "\"đơn phương chấm dứt hợp đồng lao động\" \"không hoàn thành công việc\" báo trước",
+          "Điều 36 Bộ luật Lao động 2019 đơn phương chấm dứt hợp đồng người sử dụng lao động không hoàn thành công việc",
+          "Điều 36 Bộ luật Lao động 2019 không hoàn thành công việc báo trước"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Không tìm thấy quy định cụ thể về thời hạn báo trước khi người sử dụng lao động đơn phương chấm dứt hợp đồng lao động đối với nhân viên không hoàn thành công việc trong các đoạn luật hiện có.",
+        "citations": [],
+        "expected": "Ít nhất 45 ngày.",
+        "tokens": {
+          "prompt_tokens": 7915,
+          "output_tokens": 202,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 5,
+        "active_s": 10.5,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": false,
+        "ever_retrieved": false,
+        "cited_evidence": false,
+        "gold_articles": [
+          36
+        ],
+        "final_context_articles": [
+          45,
+          31,
+          35,
+          39,
+          50
+        ],
+        "context_chars": 3573
+      },
+      {
+        "id": "t02",
+        "type": "paraphrase",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "trợ cấp thôi việc mỗi năm làm việc bằng bao nhiêu tháng tiền lương"
+        ],
+        "answer": "Khi hợp đồng lao động chấm dứt theo quy định, người sử dụng lao động có trách nhiệm trả trợ cấp thôi việc cho người lao động đã làm việc thường xuyên từ đủ 12 tháng trở lên, cứ mỗi năm làm việc được trợ cấp một nửa tháng tiền lương (trừ trường hợp đủ điều kiện hưởng lương hưu và trường hợp người lao động tự ý bỏ việc mà không có lý do chính đáng từ 05 ngày làm việc liên tục trở lên) [BLLD_45_2019_QH14#B#art046].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art046"
+        ],
+        "expected": "Một nửa tháng tiền lương cho mỗi năm làm việc (với người làm việc thường xuyên từ đủ 12 tháng trở lên).",
+        "tokens": {
+          "prompt_tokens": 2297,
+          "output_tokens": 189,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 4.2,
+        "wait_s": 52.4,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          46
+        ],
+        "final_context_articles": [
+          97,
+          47,
+          46
+        ],
+        "context_chars": 3226
+      },
+      {
+        "id": "t03",
+        "type": "conditional",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "nghỉ giữa giờ làm việc ban đêm"
+        ],
+        "answer": "Người lao động làm việc ban đêm từ 06 giờ trở lên thì được nghỉ giữa giờ ít nhất 45 phút liên tục [BLLD_45_2019_QH14#B#art109].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art109"
+        ],
+        "expected": "Ít nhất 45 phút liên tục.",
+        "tokens": {
+          "prompt_tokens": 1918,
+          "output_tokens": 113,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 8.8,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          109
+        ],
+        "final_context_articles": [
+          106,
+          98,
+          109
+        ],
+        "context_chars": 1875
+      },
+      {
+        "id": "t04",
+        "type": "direct",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "chưa đủ 15 tuổi làm việc bao nhiêu giờ mỗi ngày mỗi tuần"
+        ],
+        "answer": "Thời giờ làm việc của người chưa đủ 15 tuổi không được quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; đồng thời không được làm thêm giờ và làm việc vào ban đêm [BLLD_45_2019_QH14#B#art146].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art146"
+        ],
+        "expected": "Không quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; không được làm thêm giờ, làm việc vào ban đêm.",
+        "tokens": {
+          "prompt_tokens": 2127,
+          "output_tokens": 141,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.4,
+        "wait_s": 49.1,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          146
+        ],
+        "final_context_articles": [
+          146,
+          145,
+          143
+        ],
+        "context_chars": 2456
+      },
+      {
+        "id": "t05",
+        "type": "paraphrase",
+        "answerable": true,
+        "status": "abstain",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": null,
+        "citations": [],
+        "expected": "01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm.",
+        "tokens": {
+          "prompt_tokens": 2323,
+          "output_tokens": 184,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.6,
+        "wait_s": 6.9,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": false,
+        "gold_articles": [
+          190
+        ],
+        "final_context_articles": [
+          190,
+          194,
+          189
+        ],
+        "context_chars": 3270
+      },
+      {
+        "id": "t06",
+        "type": "metadata_filter",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "đình công bị cấm ở những nơi sử dụng lao động"
+        ],
+        "answer": "Theo quy định của Bộ luật Lao động, không được đình công ở những nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người [BLLD_45_2019_QH14#B#art209]. Danh mục cụ thể các nơi sử dụng lao động này do Chính phủ quy định [BLLD_45_2019_QH14#B#art209].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art209"
+        ],
+        "expected": "Nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người; danh mục cụ thể do Chính phủ quy định.",
+        "tokens": {
+          "prompt_tokens": 1811,
+          "output_tokens": 178,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.9,
+        "wait_s": 43.4,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          209
+        ],
+        "final_context_articles": [
+          209,
+          206,
+          208
+        ],
+        "context_chars": 1552
+      },
+      {
+        "id": "t07",
+        "type": "cross_reference",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 2,
+        "queries": [
+          "tuổi nghỉ hưu năm đóng bảo hiểm xã hội hưởng lương hưu",
+          "Luật Bảo hiểm xã hội số năm đóng bảo hiểm xã hội hưởng lương hưu"
+        ],
+        "answer": "Theo Bộ luật Lao động, người lao động bảo đảm điều kiện về thời gian đóng bảo hiểm xã hội theo quy định của pháp luật về bảo hiểm xã hội được hưởng lương hưu khi đủ tuổi nghỉ hưu [BLLD_45_2019_QH14#B#art169]. Tuy nhiên, số năm cụ thể cần đóng bảo hiểm xã hội được thực hiện theo quy định của pháp luật về bảo hiểm xã hội [BLLD_45_2019_QH14#B#art169].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art169"
+        ],
+        "expected": "Đủ 20 năm đóng bảo hiểm xã hội trở lên (Điều 54 Luật Bảo hiểm xã hội được sửa đổi tại Điều 219 của Bộ luật).",
+        "tokens": {
+          "prompt_tokens": 4327,
+          "output_tokens": 216,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 3.6,
+        "wait_s": 10.6,
+        "error": null,
+        "context_evidence": false,
+        "ever_retrieved": false,
+        "cited_evidence": false,
+        "gold_articles": [
+          219
+        ],
+        "final_context_articles": [
+          169,
+          149,
+          168
+        ],
+        "context_chars": 3606
+      },
+      {
+        "id": "tm01",
+        "type": "multi_hop",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 2,
+        "queries": [
+          "thử việc trình độ chuyên môn từ cao đẳng trở lên tối đa bao nhiêu tháng lương tối thiểu phần trăm",
+          "thử việc trình độ chuyên môn từ cao đẳng trở lên tối đa bao lâu"
+        ],
+        "answer": "Thời gian thử việc đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên được kéo dài tối đa không quá 60 ngày [BLLD_45_2019_QH14#B#art025]. Tiền lương thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó [BLLD_45_2019_QH14#B#art026].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art025",
+          "BLLD_45_2019_QH14#B#art026"
+        ],
+        "expected": "Không quá 60 ngày; lương thử việc ít nhất bằng 85% mức lương của công việc đó.",
+        "tokens": {
+          "prompt_tokens": 3649,
+          "output_tokens": 239,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 4.8,
+        "wait_s": 46.6,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          25,
+          26
+        ],
+        "final_context_articles": [
+          155,
+          26,
+          97,
+          25,
+          123
+        ],
+        "context_chars": 3244
+      },
+      {
+        "id": "tm02",
+        "type": "multi_hop",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 4,
+        "queries": [
+          "trợ cấp mất việc làm thanh toán chấm dứt hợp đồng thời hạn",
+          "trợ cấp mất việc làm Điều 47",
+          "thanh toán các khoản tiền khi chấm dứt hợp đồng lao động thời hạn Điều 48",
+          "Điều 48 Bộ luật Lao động 2019 thanh toán tiền khi chấm dứt hợp đồng lao động"
+        ],
+        "answer": "1. Về trợ cấp mất việc làm:\n- Người sử dụng lao động trả trợ cấp mất việc làm cho người lao động đã làm việc thường xuyên từ đủ 12 tháng trở lên mà bị mất việc làm theo quy định tại khoản 11 Điều 34 của Bộ luật Lao động, cứ mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương [BLLD_45_2019_QH14#B#art047].\n- Thời gian làm việc để tính trợ cấp mất việc làm là tổng thời gian đã làm việc thực tế trừ đi thời gian đã tham gia bảo hiểm thất nghiệp và thời gian làm việc đã được chi trả trợ cấp thôi việc, trợ cấp mất việc làm [BLLD_45_2019_QH14#B#art047].\n- Tiền lương để tính trợ cấp mất việc làm là tiền lương bình quân của 06 tháng liền kề theo hợp đồng lao động trước khi người lao động mất việc làm [BLLD_45_2019_QH14#B#art047].\n\n2. Về thời hạn thanh toán các khoản tiền khi chấm dứt hợp đồng: CONTEXT không chứa thông tin về thời hạn thanh toán các khoản tiền khi chấm dứt hợp đồng lao động.",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art047"
+        ],
+        "expected": "Mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương (với người làm việc thường xuyên từ đủ 12 tháng); thanh toán trong 14 ngày làm việc kể từ ngày chấm dứt hợp đồng, một số trường hợp (như thay đổi cơ cấu, công nghệ, lý do kinh tế) được kéo dài nhưng không quá 30 ngày.",
+        "tokens": {
+          "prompt_tokens": 7487,
+          "output_tokens": 450,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 5,
+        "active_s": 7.9,
+        "wait_s": 52.6,
+        "error": null,
+        "context_evidence": false,
+        "ever_retrieved": false,
+        "cited_evidence": false,
+        "gold_articles": [
+          47,
+          48
+        ],
+        "final_context_articles": [
+          46,
+          39,
+          40,
+          47,
+          102
+        ],
+        "context_chars": 3426
+      },
+      {
+        "id": "tu01",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 4,
+        "queries": [
+          "thuế thu nhập cá nhân tiền lương",
+          "thuế thu nhập cá nhân",
+          "thu nhập chịu thuế thu nhập cá nhân",
+          "thuế thu nhập cá nhân bao nhiêu"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động không quy định mức thu nhập từ tiền lương phải nộp thuế thu nhập cá nhân.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 7241,
+          "output_tokens": 118,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 5,
+        "active_s": 5.4,
+        "wait_s": 54.7,
+        "error": null
+      },
+      {
+        "id": "tu02",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 2,
+        "queries": [
+          "không giao kết hợp đồng lao động bằng văn bản phạt tiền",
+          "hợp đồng lao động bằng văn bản phạt tiền"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động 2019 không quy định mức phạt tiền đối với hành vi vi phạm về giao kết hợp đồng lao động.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 3105,
+          "output_tokens": 91,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 3.1,
+        "wait_s": 7.0,
+        "error": null
+      },
+      {
+        "id": "tu03",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 2,
+        "queries": [
+          "nghỉ thai sản trợ cấp bảo hiểm xã hội phần trăm mức bình quân tiền lương",
+          "chế độ thai sản mức bình quân tiền lương đóng bảo hiểm xã hội luật bảo hiểm xã hội"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động 2019 không quy định chi tiết tỷ lệ phần trăm mức hưởng trợ cấp thai sản mà dẫn chiếu sang quy định của pháp luật về bảo hiểm xã hội.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 3931,
+          "output_tokens": 117,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 3.1,
+        "wait_s": 48.2,
+        "error": null
+      }
+    ],
+    "bm25_excerpt_B": [
+      {
+        "id": "t01",
+        "type": "conditional",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 4,
+        "queries": [
+          "đơn phương chấm dứt hợp đồng lao động không xác định thời hạn báo trước không hoàn thành công việc",
+          "Điều 37 Bộ luật Lao động 2019 thời hạn báo trước người sử dụng lao động",
+          "Điều 37 Bộ luật Lao động 2019 thời hạn báo trước người sử dụng lao động",
+          "Điều 37 Bộ luật Lao động 2019 thời hạn báo trước người sử dụng lao động"
+        ],
+        "answer": "CONXTXT hiện tại không chứa thông tin về thời hạn báo trước khi người sử dụng lao động đơn phương chấm dứt hợp đồng lao động. [BLLD_45_2019_QH14#B#art036]",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art036"
+        ],
+        "expected": "Ít nhất 45 ngày.",
+        "tokens": {
+          "prompt_tokens": 7784,
+          "output_tokens": 234,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 5,
+        "active_s": 6.4,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": false,
+        "ever_retrieved": true,
+        "cited_evidence": false,
+        "gold_articles": [
+          36
+        ],
+        "final_context_articles": [
+          36,
+          35,
+          38
+        ],
+        "context_chars": 3421
+      },
+      {
+        "id": "t02",
+        "type": "paraphrase",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "trợ cấp thôi việc mỗi năm làm việc bằng bao nhiêu tháng tiền lương"
+        ],
+        "answer": "Khi hợp đồng lao động chấm dứt theo quy định, người lao động đã làm việc thường xuyên cho người sử dụng lao động từ đủ 12 tháng trở lên mà thuộc diện được hưởng trợ cấp thôi việc thì cứ mỗi năm làm việc được trợ cấp một nửa (1/2) tháng tiền lương (trừ trường hợp đủ điều kiện hưởng lương hưu và trường hợp người lao động tự ý bỏ việc mà không có lý do chính đáng từ 05 ngày làm việc trở lên liên tục) [BLLD_45_2019_QH14#B#art046].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art046"
+        ],
+        "expected": "Một nửa tháng tiền lương cho mỗi năm làm việc (với người làm việc thường xuyên từ đủ 12 tháng trở lên).",
+        "tokens": {
+          "prompt_tokens": 2365,
+          "output_tokens": 195,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.8,
+        "wait_s": 54.1,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          46
+        ],
+        "final_context_articles": [
+          47,
+          46,
+          41
+        ],
+        "context_chars": 3494
+      },
+      {
+        "id": "t03",
+        "type": "conditional",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "nghỉ giữa giờ làm việc ban đêm"
+        ],
+        "answer": "Người lao động làm việc ban đêm từ 06 giờ trở lên thì được nghỉ giữa giờ ít nhất 45 phút liên tục [BLLD_45_2019_QH14#B#art109].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art109"
+        ],
+        "expected": "Ít nhất 45 phút liên tục.",
+        "tokens": {
+          "prompt_tokens": 1918,
+          "output_tokens": 113,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.2,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          109
+        ],
+        "final_context_articles": [
+          109,
+          98,
+          106
+        ],
+        "context_chars": 1875
+      },
+      {
+        "id": "t04",
+        "type": "direct",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "người chưa đủ 15 tuổi làm việc giờ làm việc tuần ngày"
+        ],
+        "answer": "Thời giờ làm việc của người chưa đủ 15 tuổi không được quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; không được làm thêm giờ và không được làm việc vào ban đêm [BLLD_45_2019_QH14#B#art146].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art146"
+        ],
+        "expected": "Không quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; không được làm thêm giờ, làm việc vào ban đêm.",
+        "tokens": {
+          "prompt_tokens": 2126,
+          "output_tokens": 140,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.4,
+        "wait_s": 54.5,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          146
+        ],
+        "final_context_articles": [
+          146,
+          145,
+          143
+        ],
+        "context_chars": 2456
+      },
+      {
+        "id": "t05",
+        "type": "paraphrase",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "thời hiệu khởi kiện tranh chấp lao động cá nhân Tòa án"
+        ],
+        "answer": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm. [BLLD_45_2019_QH14#B#art190]",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art190"
+        ],
+        "expected": "01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm.",
+        "tokens": {
+          "prompt_tokens": 1961,
+          "output_tokens": 137,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.2,
+        "wait_s": 0.5,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          190
+        ],
+        "final_context_articles": [
+          190,
+          187,
+          191
+        ],
+        "context_chars": 1967
+      },
+      {
+        "id": "t06",
+        "type": "metadata_filter",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "đình công không được thực hiện tại nơi sử dụng lao động nào"
+        ],
+        "answer": "Không được đình công ở nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người [BLLD_45_2019_QH14#B#art209]. Danh mục cụ thể do Chính phủ quy định [BLLD_45_2019_QH14#B#art209].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art209"
+        ],
+        "expected": "Nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người; danh mục cụ thể do Chính phủ quy định.",
+        "tokens": {
+          "prompt_tokens": 2058,
+          "output_tokens": 162,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 1.9,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          209
+        ],
+        "final_context_articles": [
+          209,
+          208,
+          201
+        ],
+        "context_chars": 2449
+      },
+      {
+        "id": "t07",
+        "type": "cross_reference",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 1,
+        "queries": [
+          "đủ tuổi nghỉ hưu số năm đóng bảo hiểm xã hội hưởng lương hưu"
+        ],
+        "answer": "Khi đủ tuổi nghỉ hưu, người lao động cần có ít nhất 20 năm đóng bảo hiểm xã hội trở lên để được hưởng lương hưu (đối với các trường hợp thông thường theo quy định tại điểm a khoản 1 Điều 219) [BLLD_45_2019_QH14#B#art219].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art219"
+        ],
+        "expected": "Đủ 20 năm đóng bảo hiểm xã hội trở lên (Điều 54 Luật Bảo hiểm xã hội được sửa đổi tại Điều 219 của Bộ luật).",
+        "tokens": {
+          "prompt_tokens": 2534,
+          "output_tokens": 149,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 2.9,
+        "wait_s": 54.6,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          219
+        ],
+        "final_context_articles": [
+          169,
+          219,
+          149
+        ],
+        "context_chars": 3747
+      },
+      {
+        "id": "tm01",
+        "type": "multi_hop",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 2,
+        "queries": [
+          "thử việc trình độ chuyên môn từ cao đẳng trở lên tối đa lương thử việc tối thiểu phần trăm",
+          "tiền lương thử việc theo Điều 26 Bộ luật Lao động"
+        ],
+        "answer": "- Thời gian thử việc đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên được kéo dài tối đa không quá 60 ngày [BLLD_45_2019_QH14#B#art025].\n- Tiền lương thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó [BLLD_45_2019_QH14#B#art026].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art025",
+          "BLLD_45_2019_QH14#B#art026"
+        ],
+        "expected": "Không quá 60 ngày; lương thử việc ít nhất bằng 85% mức lương của công việc đó.",
+        "tokens": {
+          "prompt_tokens": 4068,
+          "output_tokens": 239,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 4.2,
+        "wait_s": 0.0,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          25,
+          26
+        ],
+        "final_context_articles": [
+          25,
+          26,
+          91,
+          24,
+          101,
+          41
+        ],
+        "context_chars": 3995
+      },
+      {
+        "id": "tm02",
+        "type": "multi_hop",
+        "answerable": true,
+        "status": "answered",
+        "decision": "answer",
+        "n_searches": 2,
+        "queries": [
+          "trợ cấp mất việc làm",
+          "thanh toán các khoản tiền khi chấm dứt hợp đồng lao động thời hạn"
+        ],
+        "answer": "Cách tính trợ cấp mất việc làm và thời hạn thanh toán các khoản tiền khi chấm dứt hợp đồng lao động:\n\n1. **Trợ cấp mất việc làm:**\n- **Điều kiện:** Người lao động đã làm việc thường xuyên cho người sử dụng lao động từ đủ 12 tháng trở lên mà bị mất việc làm [BLLD_45_2019_QH14#B#art047].\n- **Mức chi trả:** Cứ mỗi năm làm việc trả 01 tháng tiền lương, nhưng ít nhất bằng 02 tháng tiền lương [BLLD_45_2019_QH14#B#art047].\n- **Thời gian tính trợ cấp:** Là tổng thời gian làm việc thực tế cho người sử dụng lao động trừ đi thời gian đã tham gia bảo hiểm thất nghiệp và thời gian làm việc đã được chi trả trợ cấp thôi việc, trợ cấp mất việc làm [BLLD_45_2019_QH14#B#art047].\n- **Tiền lương tính trợ cấp:** Là tiền lương bình quân của 06 tháng liền kề theo hợp đồng lao động trước khi người lao động mất việc làm [BLLD_45_2019_QH14#B#art047].\n\n2. **Thời hạn thanh toán các khoản tiền khi chấm dứt hợp đồng lao động:**\n- Trong thời hạn **14 ngày làm việc** kể từ ngày chấm dứt hợp đồng lao động, hai bên có trách nhiệm thanh toán đầy đủ các khoản tiền có liên quan đến quyền lợi của mỗi bên [BLLD_45_2019_QH14#B#art048].\n- Thời hạn này có thể kéo dài nhưng **không quá 30 ngày** trong các trường hợp sau đây:\n  + Người sử dụng lao động không phải là cá nhân chấm dứt hoạt động [BLLD_45_2019_QH14#B#art048];\n  + Thay đổi cơ cấu, công nghệ hoặc vì lý do kinh tế [BLLD_45_2019_QH14#B#art048];\n  + Chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản của doanh nghiệp, hợp tác xã [BLLD_45_2019_QH14#B#art048];\n  + Do thiên tai, hỏa hoạn, địch họa hoặc dịch bệnh nguy hiểm [BLLD_45_2019_QH14#B#art048].",
+        "abstain_reason": null,
+        "citations": [
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art048"
+        ],
+        "expected": "Mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương (với người làm việc thường xuyên từ đủ 12 tháng); thanh toán trong 14 ngày làm việc kể từ ngày chấm dứt hợp đồng, một số trường hợp (như thay đổi cơ cấu, công nghệ, lý do kinh tế) được kéo dài nhưng không quá 30 ngày.",
+        "tokens": {
+          "prompt_tokens": 4269,
+          "output_tokens": 705,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 11.4,
+        "wait_s": 53.4,
+        "error": null,
+        "context_evidence": true,
+        "ever_retrieved": true,
+        "cited_evidence": true,
+        "gold_articles": [
+          47,
+          48
+        ],
+        "final_context_articles": [
+          47,
+          48,
+          46,
+          41
+        ],
+        "context_chars": 3919
+      },
+      {
+        "id": "tu01",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 3,
+        "queries": [
+          "thu nhập từ tiền lương thuế thu nhập cá nhân",
+          "thuế thu nhập cá nhân",
+          "thuế thu nhập cá nhân tiền lương"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động 45/2019/QH14 không quy định về mức thu nhập chịu thuế thu nhập cá nhân.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 5206,
+          "output_tokens": 107,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 4,
+        "active_s": 4.2,
+        "wait_s": 54.1,
+        "error": null
+      },
+      {
+        "id": "tu02",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 1,
+        "queries": [
+          "không giao kết hợp đồng lao động bằng văn bản phạt tiền"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động 45/2019/QH14 không quy định mức phạt tiền đối với hành vi không giao kết hợp đồng lao động bằng văn bản.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 2139,
+          "output_tokens": 76,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 2,
+        "active_s": 1.6,
+        "wait_s": 1.4,
+        "error": null
+      },
+      {
+        "id": "tu03",
+        "type": "unanswerable",
+        "answerable": false,
+        "status": "abstain",
+        "decision": "abstain",
+        "n_searches": 2,
+        "queries": [
+          "nghỉ thai sản trợ cấp bảo hiểm xã hội phần trăm tiền lương",
+          "bảo hiểm xã hội chế độ thai sản trợ cấp tiền lương"
+        ],
+        "answer": "Không đủ bằng chứng để trả lời.",
+        "abstain_reason": "Bộ luật Lao động 2019 quy định chế độ thai sản thực hiện theo quy định của pháp luật về bảo hiểm xã hội, không nêu cụ thể tỷ lệ phần trăm mức bình quân tiền lương đóng bảo hiểm xã hội trong văn bản này.",
+        "citations": [],
+        "expected": null,
+        "tokens": {
+          "prompt_tokens": 4067,
+          "output_tokens": 120,
+          "thinking_tokens": 0
+        },
+        "n_model_calls": 3,
+        "active_s": 3.2,
+        "wait_s": 54.3,
+        "error": null
+      }
+    ]
+  }
+}
