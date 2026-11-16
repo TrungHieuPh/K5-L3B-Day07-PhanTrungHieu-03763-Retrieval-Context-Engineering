@@ -1,0 +1,452 @@
+{
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "query_dim": 384,
+  "index_dim": 384,
+  "strategy": "B",
+  "check1_reembed": {
+    "sample_size": 20,
+    "seed": 7,
+    "threshold": 0.9999,
+    "min_cosine": 1.0,
+    "per_chunk": {
+      "BLLD_45_2019_QH14#B#art083": 1.0,
+      "BLLD_45_2019_QH14#B#art039": 1.0,
+      "BLLD_45_2019_QH14#B#art102": 1.0,
+      "BLLD_45_2019_QH14#B#art167": 1.0,
+      "BLLD_45_2019_QH14#B#art013": 1.0,
+      "BLLD_45_2019_QH14#B#art019": 1.0,
+      "BLLD_45_2019_QH14#B#art211": 1.0,
+      "BLLD_45_2019_QH14#B#art138": 1.0,
+      "BLLD_45_2019_QH14#B#art025": 1.0,
+      "BLLD_45_2019_QH14#B#art094": 1.0,
+      "BLLD_45_2019_QH14#B#art150": 1.0,
+      "BLLD_45_2019_QH14#B#art015": 1.0,
+      "BLLD_45_2019_QH14#B#art130": 1.0,
+      "BLLD_45_2019_QH14#B#art055": 1.0,
+      "BLLD_45_2019_QH14#B#art010": 1.0,
+      "BLLD_45_2019_QH14#B#art023": 1.0,
+      "BLLD_45_2019_QH14#B#art112": 1.0,
+      "BLLD_45_2019_QH14#B#art108": 1.0,
+      "BLLD_45_2019_QH14#B#art018": 1.0,
+      "BLLD_45_2019_QH14#B#art062": 1.0
+    }
+  },
+  "check2_replay_day6": {
+    "n": 25,
+    "identical_top3": 25,
+    "score_tolerance": 0.001,
+    "scores_within_tolerance": 25,
+    "avg_query_ms": 66.6,
+    "rows": [
+      {
+        "question_id": "q01",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art106",
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art098"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art106",
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art098"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.2e-05
+      },
+      {
+        "question_id": "q02",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art140",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art140",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.9e-05
+      },
+      {
+        "question_id": "q03",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art105",
+          "BLLD_45_2019_QH14#B#art113",
+          "BLLD_45_2019_QH14#B#art114"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art105",
+          "BLLD_45_2019_QH14#B#art113",
+          "BLLD_45_2019_QH14#B#art114"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.4e-05
+      },
+      {
+        "question_id": "q04",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art114",
+          "BLLD_45_2019_QH14#B#art112"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art114",
+          "BLLD_45_2019_QH14#B#art112"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.9e-05
+      },
+      {
+        "question_id": "q05",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art113",
+          "BLLD_45_2019_QH14#B#art114"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art113",
+          "BLLD_45_2019_QH14#B#art114"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.1e-05
+      },
+      {
+        "question_id": "q06",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art220",
+          "BLLD_45_2019_QH14#B#art121",
+          "BLLD_45_2019_QH14#B#art046"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art220",
+          "BLLD_45_2019_QH14#B#art121",
+          "BLLD_45_2019_QH14#B#art046"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.7e-05
+      },
+      {
+        "question_id": "q07",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art143",
+          "BLLD_45_2019_QH14#B#art145",
+          "BLLD_45_2019_QH14#B#art147"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art143",
+          "BLLD_45_2019_QH14#B#art145",
+          "BLLD_45_2019_QH14#B#art147"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.4e-05
+      },
+      {
+        "question_id": "q08",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art105"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art111",
+          "BLLD_45_2019_QH14#B#art109",
+          "BLLD_45_2019_QH14#B#art105"
+        ],
+        "same_ids": true,
+        "max_score_diff": 1.8e-05
+      },
+      {
+        "question_id": "q09",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art035",
+          "BLLD_45_2019_QH14#B#art020",
+          "BLLD_45_2019_QH14#B#art123"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art035",
+          "BLLD_45_2019_QH14#B#art020",
+          "BLLD_45_2019_QH14#B#art123"
+        ],
+        "same_ids": true,
+        "max_score_diff": 1e-05
+      },
+      {
+        "question_id": "q10",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art148",
+          "BLLD_45_2019_QH14#B#art149"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art148",
+          "BLLD_45_2019_QH14#B#art149"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.1e-05
+      },
+      {
+        "question_id": "q11",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art140",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art140",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.2e-05
+      },
+      {
+        "question_id": "q12",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art117",
+          "BLLD_45_2019_QH14#B#art131",
+          "BLLD_45_2019_QH14#B#art124"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art117",
+          "BLLD_45_2019_QH14#B#art131",
+          "BLLD_45_2019_QH14#B#art124"
+        ],
+        "same_ids": true,
+        "max_score_diff": 1.6e-05
+      },
+      {
+        "question_id": "q14",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art115",
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art097"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art115",
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art097"
+        ],
+        "same_ids": true,
+        "max_score_diff": 2.8e-05
+      },
+      {
+        "question_id": "q15",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art033",
+          "BLLD_45_2019_QH14#B#art020",
+          "BLLD_45_2019_QH14#B#art048"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art033",
+          "BLLD_45_2019_QH14#B#art020",
+          "BLLD_45_2019_QH14#B#art048"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.7e-05
+      },
+      {
+        "question_id": "q16",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art014",
+          "BLLD_45_2019_QH14#B#art022",
+          "BLLD_45_2019_QH14#B#art013"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art014",
+          "BLLD_45_2019_QH14#B#art022",
+          "BLLD_45_2019_QH14#B#art013"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.6e-05
+      },
+      {
+        "question_id": "q17",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art045",
+          "BLLD_45_2019_QH14#B#art037",
+          "BLLD_45_2019_QH14#B#art038"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art045",
+          "BLLD_45_2019_QH14#B#art037",
+          "BLLD_45_2019_QH14#B#art038"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.5e-05
+      },
+      {
+        "question_id": "q18",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art138",
+          "BLLD_45_2019_QH14#B#art037",
+          "BLLD_45_2019_QH14#B#art140"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art138",
+          "BLLD_45_2019_QH14#B#art037",
+          "BLLD_45_2019_QH14#B#art140"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.1e-05
+      },
+      {
+        "question_id": "q19",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art101",
+          "BLLD_45_2019_QH14#B#art126"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art047",
+          "BLLD_45_2019_QH14#B#art101",
+          "BLLD_45_2019_QH14#B#art126"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.4e-05
+      },
+      {
+        "question_id": "q20",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art149",
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art148"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art149",
+          "BLLD_45_2019_QH14#B#art169",
+          "BLLD_45_2019_QH14#B#art148"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.9e-05
+      },
+      {
+        "question_id": "q21",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art108",
+          "BLLD_45_2019_QH14#B#art107",
+          "BLLD_45_2019_QH14#B#art032"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art108",
+          "BLLD_45_2019_QH14#B#art107",
+          "BLLD_45_2019_QH14#B#art032"
+        ],
+        "same_ids": true,
+        "max_score_diff": 2.1e-05
+      },
+      {
+        "question_id": "q23",
+        "filter": {
+          "chapter_roman": "VIII"
+        },
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art131",
+          "BLLD_45_2019_QH14#B#art127",
+          "BLLD_45_2019_QH14#B#art125"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art131",
+          "BLLD_45_2019_QH14#B#art127",
+          "BLLD_45_2019_QH14#B#art125"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.2e-05
+      },
+      {
+        "question_id": "q24",
+        "filter": {
+          "chapter_roman": "III"
+        },
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art019",
+          "BLLD_45_2019_QH14#B#art028",
+          "BLLD_45_2019_QH14#B#art014"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art019",
+          "BLLD_45_2019_QH14#B#art028",
+          "BLLD_45_2019_QH14#B#art014"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.8e-05
+      },
+      {
+        "question_id": "q25",
+        "filter": {
+          "chapter_roman": "X"
+        },
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art137",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art139",
+          "BLLD_45_2019_QH14#B#art137",
+          "BLLD_45_2019_QH14#B#art138"
+        ],
+        "same_ids": true,
+        "max_score_diff": 3.1e-05
+      },
+      {
+        "question_id": "q26",
+        "filter": null,
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art188",
+          "BLLD_45_2019_QH14#B#art187",
+          "BLLD_45_2019_QH14#B#art189"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art188",
+          "BLLD_45_2019_QH14#B#art187",
+          "BLLD_45_2019_QH14#B#art189"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4.1e-05
+      },
+      {
+        "question_id": "q27",
+        "filter": {
+          "chapter_roman": "XIV"
+        },
+        "day6_top3": [
+          "BLLD_45_2019_QH14#B#art189",
+          "BLLD_45_2019_QH14#B#art188",
+          "BLLD_45_2019_QH14#B#art186"
+        ],
+        "day7_top3": [
+          "BLLD_45_2019_QH14#B#art189",
+          "BLLD_45_2019_QH14#B#art188",
+          "BLLD_45_2019_QH14#B#art186"
+        ],
+        "same_ids": true,
+        "max_score_diff": 4e-05
+      }
+    ]
+  },
+  "passed": true
+}

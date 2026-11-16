@@ -1,0 +1,149 @@
+[
+  {
+    "query_id": "t01",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "context_grade": 0,
+    "answer_grade": 0,
+    "reason": "Context cuối [45,31,35,39,50] không có Điều 36 (dense không bao giờ lấy được Điều 36 qua 4 lượt tìm). Agent từ chối -> câu có đáp án bị từ chối = 0. Lỗi retrieval.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t02",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art046"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 46 khoản 1 có đủ 'mỗi năm làm việc được trợ cấp một nửa tháng tiền lương' + điều kiện 'từ đủ 12 tháng'. Trả lời đúng và đủ; [art046] hỗ trợ ý chính. Lưu ý: chi tiết 'tự ý bỏ việc ... từ 05 ngày làm việc liên tục' là model tự diễn giải 'điểm e khoản 1 Điều 36' (Điều 36 không có trong context) - đúng luật nhưng không có trong context.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t03",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art109"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 109 khoản 1 có 'làm việc ban đêm thì được nghỉ giữa giờ ít nhất 45 phút liên tục'. Trả lời đúng, [art109] hỗ trợ.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t04",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art146"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 146 khoản 1 có đủ 04 giờ/ngày, 20 giờ/tuần, không làm thêm giờ/ban đêm. Trả lời đúng và đủ, [art146] hỗ trợ.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t05",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "context_grade": 2,
+    "answer_grade": 0,
+    "reason": "Điều 190 khoản 3 ('01 năm') có trong context và model viết câu trả lời đúng, nhưng không ghi [id] trong text câu trả lời (chỉ để trong danh sách citations) -> run_agent bắt lỗi invalid_or_missing_citations và đổi thành từ chối. Theo quy tắc: từ chối câu có đáp án = 0. Lỗi định dạng citation.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t06",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art209"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 209 khoản 1-2 có đủ (quốc phòng, an ninh, trật tự công cộng, sức khỏe; danh mục do Chính phủ quy định). Trả lời đúng và đủ, [art209] hỗ trợ cả 2 ý.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t07",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art169"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 0,
+    "answer_grade": 0,
+    "reason": "Context cuối [169,149,168] không có Điều 219 (nơi có 'đủ 20 năm đóng bảo hiểm xã hội'). Model trả lời chung chung 'theo pháp luật về bảo hiểm xã hội', không nêu số năm -> thiếu đúng thông tin được hỏi = 0. Citation [art169] hỗ trợ đúng những gì model viết (Điều 169 khoản 1) nên vẫn hợp lệ. Lỗi retrieval.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tm01",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art025",
+      "BLLD_45_2019_QH14#B#art026"
+    ],
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 25 khoản 2 ('không quá 60 ngày ... cao đẳng trở lên') và Điều 26 ('ít nhất phải bằng 85%') đều có trong context. Trả lời đúng cả 2 vế; [art025] hỗ trợ vế 1, [art026] hỗ trợ vế 2.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tm02",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art047"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 1,
+    "answer_grade": 1,
+    "reason": "Multi-hop: context có Điều 47 (trợ cấp mất việc làm) nhưng thiếu Điều 48 (thời hạn 14 ngày). Model trả lời đúng vế 1 và nói rõ không có thông tin vế 2 -> đúng một phần = 1. [art047] hỗ trợ vế 1.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu01",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 4 lượt rồi từ chối; lý do 'Bộ luật Lao động không quy định mức thu nhập ... phải nộp thuế TNCN' - không thêm con số hay khẳng định vô căn cứ. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu02",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 2 lượt rồi từ chối; lý do 'không quy định mức phạt tiền' - không bịa mức phạt. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu03",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 2 lượt rồi từ chối; lý do nêu đúng Điều 139 dẫn chiếu sang pháp luật BHXH, không bịa tỷ lệ %. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  }
+]

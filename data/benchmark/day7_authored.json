@@ -1,0 +1,136 @@
+[
+  {
+    "id": "dm01", "split": "dev", "type": "multi_hop", "origin": "day7",
+    "question": "Dịp Quốc khánh người lao động được nghỉ mấy ngày hưởng nguyên lương, và nếu phải làm thêm giờ vào những ngày nghỉ đó thì được trả lương ít nhất bằng bao nhiêu phần trăm?",
+    "expected_answer": "Nghỉ 02 ngày (ngày 02/9 dương lịch và 01 ngày liền kề trước hoặc sau); làm thêm giờ vào ngày nghỉ lễ được trả ít nhất 300% (chưa kể tiền lương ngày lễ đối với người hưởng lương ngày).",
+    "gold_groups": [
+      [{"article": 112, "evidence": "Quốc khánh: 02 ngày (ngày 02 tháng 9 dương lịch và 01 ngày liền kề trước hoặc sau)"}],
+      [{"article": 98, "evidence": "Vào ngày nghỉ lễ, tết, ngày nghỉ có hưởng lương, ít nhất bằng 300%"}]
+    ],
+    "grading_note": "2 = đúng cả số ngày nghỉ và mức 300%, có citation cho cả hai; 1 = đúng một phần; 0 = sai hoặc từ chối."
+  },
+  {
+    "id": "dm02", "split": "dev", "type": "multi_hop", "origin": "day7",
+    "question": "Thời hiệu xử lý kỷ luật lao động thông thường là bao lâu, và trong lúc xác minh một vụ vi phạm phức tạp, người sử dụng lao động được tạm đình chỉ công việc của người lao động tối đa bao nhiêu ngày?",
+    "expected_answer": "Thời hiệu 06 tháng kể từ ngày xảy ra vi phạm (12 tháng nếu liên quan trực tiếp đến tài chính, tài sản, bí mật công nghệ, bí mật kinh doanh); tạm đình chỉ không quá 15 ngày, trường hợp đặc biệt không quá 90 ngày.",
+    "gold_groups": [
+      [{"article": 123, "evidence": "Thời hiệu xử lý kỷ luật lao động là 06 tháng kể từ ngày xảy ra hành vi vi phạm"}],
+      [{"article": 128, "evidence": "Thời hạn tạm đình chỉ công việc không được quá 15 ngày, trường hợp đặc biệt không được quá 90 ngày"}]
+    ],
+    "grading_note": "2 = đúng 06 tháng và 15 ngày (90 ngày trường hợp đặc biệt), có citation cho cả hai; nêu thêm mốc 12 tháng là điểm cộng, không bắt buộc; 1 = đúng một phần; 0 = sai hoặc từ chối."
+  },
+  {
+    "id": "du01", "split": "dev", "type": "unanswerable", "origin": "day7",
+    "question": "Mức lương tối thiểu vùng I hiện nay là bao nhiêu đồng một tháng?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Bộ luật chỉ định nghĩa lương tối thiểu, nêu nguyên tắc xác lập theo vùng và giao Chính phủ quyết định, công bố mức cụ thể (Điều 91); không có số tiền của vùng I.",
+    "absence_check": {"patterns": ["vùng i\\b", "\\d[\\d.,]*\\s*(?:đồng|triệu|nghìn)", "lương tối thiểu vùng"], "near_articles": [91]}
+  },
+  {
+    "id": "du02", "split": "dev", "type": "unanswerable", "origin": "day7",
+    "question": "Người lao động mất việc được hưởng trợ cấp thất nghiệp hằng tháng bằng bao nhiêu phần trăm tiền lương?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Bộ luật chỉ quy định nghĩa vụ tham gia bảo hiểm thất nghiệp (Điều 168) và trừ thời gian tham gia khi tính trợ cấp thôi việc, mất việc làm (Điều 46, 47); mức hưởng trợ cấp thất nghiệp thuộc Luật Việc làm, không có trong corpus.",
+    "absence_check": {"patterns": ["trợ cấp thất nghiệp", "mức hưởng", "\\d+\\s*%.{0,60}thất nghiệp", "thất nghiệp.{0,60}\\d+\\s*%"], "near_articles": [46, 47, 168]}
+  },
+  {
+    "id": "du03", "split": "dev", "type": "unanswerable", "origin": "day7",
+    "question": "Người lao động phải đóng bảo hiểm xã hội bắt buộc theo tỷ lệ bao nhiêu phần trăm tiền lương?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Điều 168 chỉ quy định nghĩa vụ tham gia bảo hiểm xã hội bắt buộc, không nêu tỷ lệ đóng; phần sửa Luật Bảo hiểm xã hội ở Điều 219 chỉ nói điều kiện hưởng lương hưu.",
+    "absence_check": {"patterns": ["mức đóng", "tỷ lệ đóng", "đóng bảo hiểm xã hội.{0,60}\\d+\\s*%", "\\d+\\s*%.{0,60}bảo hiểm xã hội"], "near_articles": [168, 219]}
+  },
+
+  {
+    "id": "t01", "split": "test", "type": "conditional", "origin": "day7",
+    "question": "Công ty muốn đơn phương chấm dứt hợp đồng lao động không xác định thời hạn với một nhân viên thường xuyên không hoàn thành công việc. Công ty phải báo trước ít nhất bao nhiêu ngày?",
+    "expected_answer": "Ít nhất 45 ngày.",
+    "gold": [{"article": 36, "evidence": "Ít nhất 45 ngày đối với hợp đồng lao động không xác định thời hạn"}],
+    "grading_note": "Điều 35 (người lao động báo trước) cũng có con số 45 ngày nhưng sai chủ thể; trả lời đúng số nhưng chỉ trích Điều 35 thì citation không hỗ trợ."
+  },
+  {
+    "id": "t02", "split": "test", "type": "paraphrase", "origin": "day7",
+    "question": "Nghỉ việc sau nhiều năm làm cho một công ty, cứ mỗi năm làm việc người lao động được trả trợ cấp thôi việc bằng bao nhiêu tháng lương?",
+    "expected_answer": "Một nửa tháng tiền lương cho mỗi năm làm việc (với người làm việc thường xuyên từ đủ 12 tháng trở lên).",
+    "gold": [{"article": 46, "evidence": "mỗi năm làm việc được trợ cấp một nửa tháng tiền lương"}],
+    "grading_note": "Điều 47 (trợ cấp mất việc làm, 01 tháng/năm) gần giống chữ; trả lời 01 tháng là sai."
+  },
+  {
+    "id": "t03", "split": "test", "type": "conditional", "origin": "day7",
+    "question": "Người lao động làm ca đêm từ 06 giờ trở lên được nghỉ giữa giờ ít nhất bao lâu?",
+    "expected_answer": "Ít nhất 45 phút liên tục.",
+    "gold": [{"article": 109, "evidence": "làm việc ban đêm thì được nghỉ giữa giờ ít nhất 45 phút liên tục"}],
+    "grading_note": "Trả lời 30 phút (mức ca ngày) là sai."
+  },
+  {
+    "id": "t04", "split": "test", "type": "direct", "origin": "day7",
+    "question": "Người chưa đủ 15 tuổi được làm việc tối đa bao nhiêu giờ mỗi ngày và mỗi tuần?",
+    "expected_answer": "Không quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; không được làm thêm giờ, làm việc vào ban đêm.",
+    "gold": [{"article": 146, "evidence": "Thời giờ làm việc của người chưa đủ 15 tuổi không được quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần"}],
+    "grading_note": "Cần đúng cả 04 giờ/ngày và 20 giờ/tuần; nhầm sang mức 08 giờ/40 giờ (từ đủ 15 đến dưới 18 tuổi) hoặc 08 giờ/48 giờ (Điều 105) là sai."
+  },
+  {
+    "id": "t05", "split": "test", "type": "paraphrase", "origin": "day7",
+    "question": "Người lao động muốn khởi kiện ra Tòa án về tranh chấp lao động cá nhân thì thời hiệu là bao lâu?",
+    "expected_answer": "01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm.",
+    "gold": [{"article": 190, "evidence": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm"}],
+    "grading_note": "Nhầm sang 06 tháng (hòa giải viên) hoặc 09 tháng (Hội đồng trọng tài) là sai."
+  },
+  {
+    "id": "t06", "split": "test", "type": "metadata_filter", "origin": "day7",
+    "question": "Đình công bị cấm ở những nơi sử dụng lao động nào?",
+    "expected_answer": "Nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người; danh mục cụ thể do Chính phủ quy định.",
+    "gold": [{"article": 209, "evidence": "Không được đình công ở nơi sử dụng lao động mà việc đình công có thể đe dọa đến quốc phòng, an ninh, trật tự công cộng, sức khỏe của con người"}],
+    "filter": {"chapter_roman": "XIV"},
+    "filter_context": "Input giả định do người dùng cung cấp TRƯỚC khi truy xuất: đang tra cứu trong Chương XIV — Giải quyết tranh chấp lao động. Giá trị chương lấy từ tiêu đề 'Chương …' trong văn bản gốc; không phải Điều gold.",
+    "grading_note": "Cần nêu đủ 4 nhóm: quốc phòng, an ninh, trật tự công cộng, sức khỏe con người; thiếu nhóm nào thì chấm 1."
+  },
+  {
+    "id": "t07", "split": "test", "type": "cross_reference", "origin": "day7",
+    "question": "Khi đủ tuổi nghỉ hưu, người lao động cần có ít nhất bao nhiêu năm đóng bảo hiểm xã hội để được hưởng lương hưu?",
+    "expected_answer": "Đủ 20 năm đóng bảo hiểm xã hội trở lên (Điều 54 Luật Bảo hiểm xã hội được sửa đổi tại Điều 219 của Bộ luật).",
+    "gold": [{"article": 219, "evidence": "khi nghỉ việc có đủ 20 năm đóng bảo hiểm xã hội trở lên thì được hưởng lương hưu nếu thuộc một trong các trường hợp sau đây"}],
+    "grading_note": "Câu khó: Điều 169 chỉ dẫn chiếu 'theo quy định của pháp luật về bảo hiểm xã hội' nên dễ khiến agent từ chối nhầm; con số nằm trong Điều 219 (chunk dài 7.248 ký tự). Từ chối = 0 (false refusal). Mốc 15 năm chỉ áp dụng cho cán bộ không chuyên trách cấp xã; nêu thêm không bị trừ điểm."
+  },
+  {
+    "id": "tm01", "split": "test", "type": "multi_hop", "origin": "day7",
+    "question": "Thử việc cho vị trí cần trình độ chuyên môn từ cao đẳng trở lên được kéo dài tối đa bao lâu, và lương thử việc tối thiểu bằng bao nhiêu phần trăm lương của công việc đó?",
+    "expected_answer": "Không quá 60 ngày; lương thử việc ít nhất bằng 85% mức lương của công việc đó.",
+    "gold_groups": [
+      [{"article": 25, "evidence": "Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên"}],
+      [{"article": 26, "evidence": "ít nhất phải bằng 85% mức lương của công việc đó"}]
+    ],
+    "grading_note": "2 = đúng 60 ngày và 85%, có citation cho cả hai; 1 = đúng một phần; 0 = sai hoặc từ chối."
+  },
+  {
+    "id": "tm02", "split": "test", "type": "multi_hop", "origin": "day7",
+    "question": "Khi bị mất việc làm, trợ cấp mất việc làm của người lao động được tính thế nào, và sau khi chấm dứt hợp đồng hai bên phải thanh toán đầy đủ các khoản tiền trong thời hạn bao lâu?",
+    "expected_answer": "Mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương (với người làm việc thường xuyên từ đủ 12 tháng); thanh toán trong 14 ngày làm việc kể từ ngày chấm dứt hợp đồng, một số trường hợp (như thay đổi cơ cấu, công nghệ, lý do kinh tế) được kéo dài nhưng không quá 30 ngày.",
+    "gold_groups": [
+      [{"article": 47, "evidence": "cứ mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương"}],
+      [{"article": 48, "evidence": "Trong thời hạn 14 ngày làm việc kể từ ngày chấm dứt hợp đồng lao động, hai bên có trách nhiệm thanh toán đầy đủ các khoản tiền có liên quan đến quyền lợi của mỗi bên"}]
+    ],
+    "grading_note": "2 = đúng 01 tháng/năm (tối thiểu 02 tháng) và 14 ngày làm việc, có citation cho cả hai; nêu mốc kéo dài 30 ngày là điểm cộng, không bắt buộc. Nhầm sang trợ cấp thôi việc (nửa tháng/năm, Điều 46) là sai phần đó."
+  },
+  {
+    "id": "tu01", "split": "test", "type": "unanswerable", "origin": "day7",
+    "question": "Thu nhập từ tiền lương bao nhiêu một tháng thì người lao động phải nộp thuế thu nhập cá nhân?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus chỉ nhắc đến thuế thu nhập cá nhân một lần (trang 43) mà không có ngưỡng thu nhập chịu thuế hay mức giảm trừ gia cảnh; nội dung này thuộc Luật Thuế thu nhập cá nhân.",
+    "absence_check": {"patterns": ["thuế thu nhập", "giảm trừ", "chịu thuế", "\\d[\\d.,]*\\s*(?:đồng|triệu)"], "near_articles": [102]}
+  },
+  {
+    "id": "tu02", "split": "test", "type": "unanswerable", "origin": "day7",
+    "question": "Người sử dụng lao động không giao kết hợp đồng lao động bằng văn bản thì bị phạt tiền bao nhiêu?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Bộ luật cấm phạt tiền thay việc xử lý kỷ luật (Điều 127) và chỉ nói người vi phạm bị xử phạt vi phạm hành chính, không có mức tiền phạt; mức phạt thuộc nghị định xử phạt vi phạm hành chính về lao động.",
+    "absence_check": {"patterns": ["phạt tiền", "xử phạt", "mức phạt", "\\d[\\d.,]*\\s*(?:đồng|triệu)"], "near_articles": [14, 127]}
+  },
+  {
+    "id": "tu03", "split": "test", "type": "unanswerable", "origin": "day7",
+    "question": "Trong thời gian nghỉ thai sản, lao động nữ được hưởng trợ cấp bằng bao nhiêu phần trăm mức bình quân tiền lương đóng bảo hiểm xã hội?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Điều 139 quy định thời gian nghỉ thai sản và dẫn chiếu 'chế độ thai sản theo quy định của pháp luật về bảo hiểm xã hội'; corpus không có mức hưởng (tỷ lệ %).",
+    "absence_check": {"patterns": ["mức hưởng", "chế độ thai sản", "trợ cấp thai sản", "\\d+\\s*%.{0,80}(?:thai sản|bình quân)", "bình quân tiền lương"], "near_articles": [139]}
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "conditions": {
+    "split": "test",
+    "query": "original question",
+    "context": "pack_context(top-3, 4000 chars)",
+    "strategy": "B"
+  },
+  "methods": [
+    {
+      "method": "dense",
+      "config": "pgvector cosine, paraphrase-multilingual-MiniLM-L12-v2, strategy B",
+      "N_answerable": 9,
+      "hit@1": {
+        "n": 3,
+        "N": 9,
+        "rate": 0.333
+      },
+      "evidence_hit@3": {
+        "n": 4,
+        "N": 9,
+        "rate": 0.444
+      },
+      "hit@5": {
+        "n": 7,
+        "N": 9,
+        "rate": 0.778
+      },
+      "hit@10": {
+        "n": 7,
+        "N": 9,
+        "rate": 0.778
+      },
+      "mrr@10": 0.472,
+      "context_evidence_rate": {
+        "n": 4,
+        "N": 9,
+        "rate": 0.444
+      },
+      "multi_hop_groups_covered@3": {
+        "n": 2,
+        "N": 4
+      },
+      "avg_context_chars": 2616.3,
+      "questions_with_chunk_dropped_by_budget": 0,
+      "latency_ms": {
+        "median": 68.1,
+        "p90": 73.5
+      },
+      "cost_usd": 0.0,
+      "misses@3": [
+        "t01",
+        "t02",
+        "t07",
+        "tm01",
+        "tm02"
+      ]
+    },
+    {
+      "method": "bm25",
+      "config": "Okapi BM25 k1=1.2 b=0.75, syllable tokens, strategy B",
+      "index_seconds": 0.018,
+      "N_answerable": 9,
+      "hit@1": {
+        "n": 4,
+        "N": 9,
+        "rate": 0.444
+      },
+      "evidence_hit@3": {
+        "n": 8,
+        "N": 9,
+        "rate": 0.889
+      },
+      "hit@5": {
+        "n": 9,
+        "N": 9,
+        "rate": 1.0
+      },
+      "hit@10": {
+        "n": 9,
+        "N": 9,
+        "rate": 1.0
+      },
+      "mrr@10": 0.657,
+      "context_evidence_rate": {
+        "n": 6,
+        "N": 9,
+        "rate": 0.667
+      },
+      "multi_hop_groups_covered@3": {
+        "n": 3,
+        "N": 4
+      },
+      "avg_context_chars": 2630.4,
+      "questions_with_chunk_dropped_by_budget": 3,
+      "latency_ms": {
+        "median": 2.1,
+        "p90": 2.4
+      },
+      "cost_usd": 0.0,
+      "misses@3": [
+        "tm01"
+      ]
+    }
+  ]
+}

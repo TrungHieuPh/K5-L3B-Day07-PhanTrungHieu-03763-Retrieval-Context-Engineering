@@ -1,0 +1,159 @@
+[
+  {
+    "query_id": "t01",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art036"
+    ],
+    "citation_support": [
+      false
+    ],
+    "context_grade": 0,
+    "answer_grade": 0,
+    "reason": "Điều 36 có trong context (rank 1) nhưng excerpt 1500 ký tự giữ khoản 1 (điểm a-d) và cắt mất khoản 2 ('a) Ít nhất 45 ngày ...') -> context không có evidence = 0. Model trả lời 'CONTEXT hiện tại không chứa thông tin về thời hạn báo trước' kèm [art036]: status là answered nhưng thực chất không trả lời -> 0. Citation [art036] không hỗ trợ câu trả lời nào cho câu hỏi -> false. Lỗi excerpt cắt mất evidence (lỗi mới của excerpt_rr).",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t02",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art046"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 46 khoản 1 có đủ evidence + điều kiện 12 tháng. Trả lời đúng và đủ, [art046] hỗ trợ ý chính. Lưu ý giống baseline: chi tiết 'tự ý bỏ việc ... 05 ngày' model tự diễn giải từ 'điểm e khoản 1 Điều 36' (Điều 36 không có trong context).",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t03",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art109"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 109 khoản 1 có '45 phút liên tục' cho làm việc ban đêm. Trả lời đúng, [art109] hỗ trợ.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t04",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art146"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 146 khoản 1 có đủ. Trả lời đúng và đủ, [art146] hỗ trợ.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t05",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art190"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 190 khoản 3 ('01 năm kể từ ngày phát hiện ...') có trong context. Trả lời đúng và đủ, lần này có [art190] trong text nên run_agent chấp nhận.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t06",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art209"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 209 khoản 1-2 có đủ. Trả lời đúng và đủ, [art209] hỗ trợ cả 2 ý.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "t07",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art219"
+    ],
+    "citation_support": [
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Excerpt Điều 219 (1480 ký tự) còn giữ 'khi nghỉ việc có đủ 20 năm đóng bảo hiểm xã hội trở lên thì được hưởng lương hưu' + điểm a 'đủ tuổi theo khoản 2 Điều 169'. Trả lời 'ít nhất 20 năm' đúng, [art219] hỗ trợ. Lỗi nhỏ: ghi 'điểm a khoản 1 Điều 219' trong khi đúng ra là Điều 54 Luật BHXH được sửa bởi Điều 219 - không làm sai đáp án.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tm01",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art025",
+      "BLLD_45_2019_QH14#B#art026"
+    ],
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Điều 25 khoản 2 và Điều 26 đều có trong context. Trả lời đúng cả 2 vế; mỗi citation hỗ trợ đúng vế của nó.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tm02",
+    "status": "answered",
+    "citations": [
+      "BLLD_45_2019_QH14#B#art047",
+      "BLLD_45_2019_QH14#B#art048"
+    ],
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_grade": 2,
+    "answer_grade": 2,
+    "reason": "Context có cả Điều 47 và Điều 48 (cả chunk). Trả lời đúng và đủ: 01 tháng lương/năm, ít nhất 02 tháng; 14 ngày làm việc, kéo dài không quá 30 ngày với 4 trường hợp a-d. [art047] hỗ trợ vế 1, [art048] hỗ trợ vế 2.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu01",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 3 lượt rồi từ chối; lý do không thêm con số hay khẳng định vô căn cứ. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu02",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 1 lượt (Điều 14, 17, 18) rồi từ chối; không bịa mức phạt. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  },
+  {
+    "query_id": "tu03",
+    "status": "abstain",
+    "citations": [],
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent tìm 2 lượt rồi từ chối; lý do nêu đúng việc dẫn chiếu sang pháp luật BHXH, không bịa tỷ lệ %. Từ chối đúng.",
+    "review_status": "approved_by_user_2026-11-16"
+  }
+]

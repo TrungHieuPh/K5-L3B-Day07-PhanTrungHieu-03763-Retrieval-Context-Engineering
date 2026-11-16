@@ -1,0 +1,152 @@
+{
+  "conditions": {
+    "split": "dev",
+    "query": "original question",
+    "context": "pack_context(top-3, 4000 chars)",
+    "strategy": "B"
+  },
+  "methods": [
+    {
+      "method": "dense",
+      "config": "pgvector cosine, paraphrase-multilingual-MiniLM-L12-v2, strategy B",
+      "N_answerable": 27,
+      "hit@1": {
+        "n": 12,
+        "N": 27,
+        "rate": 0.444
+      },
+      "evidence_hit@3": {
+        "n": 22,
+        "N": 27,
+        "rate": 0.815
+      },
+      "hit@5": {
+        "n": 22,
+        "N": 27,
+        "rate": 0.815
+      },
+      "hit@10": {
+        "n": 24,
+        "N": 27,
+        "rate": 0.889
+      },
+      "mrr@10": 0.615,
+      "context_evidence_rate": {
+        "n": 21,
+        "N": 27,
+        "rate": 0.778
+      },
+      "multi_hop_groups_covered@3": {
+        "n": 3,
+        "N": 4
+      },
+      "avg_context_chars": 2664.4,
+      "questions_with_chunk_dropped_by_budget": 3,
+      "latency_ms": {
+        "median": 61.7,
+        "p90": 76.6
+      },
+      "cost_usd": 0.0,
+      "misses@3": [
+        "q03",
+        "q17",
+        "q19",
+        "q24",
+        "dm01"
+      ]
+    },
+    {
+      "method": "bm25",
+      "config": "Okapi BM25 k1=1.2 b=0.75, syllable tokens, strategy B",
+      "index_seconds": 0.023,
+      "N_answerable": 27,
+      "hit@1": {
+        "n": 21,
+        "N": 27,
+        "rate": 0.778
+      },
+      "evidence_hit@3": {
+        "n": 25,
+        "N": 27,
+        "rate": 0.926
+      },
+      "hit@5": {
+        "n": 27,
+        "N": 27,
+        "rate": 1.0
+      },
+      "hit@10": {
+        "n": 27,
+        "N": 27,
+        "rate": 1.0
+      },
+      "mrr@10": 0.864,
+      "context_evidence_rate": {
+        "n": 25,
+        "N": 27,
+        "rate": 0.926
+      },
+      "multi_hop_groups_covered@3": {
+        "n": 3,
+        "N": 4
+      },
+      "avg_context_chars": 2836.0,
+      "questions_with_chunk_dropped_by_budget": 9,
+      "latency_ms": {
+        "median": 1.6,
+        "p90": 2.3
+      },
+      "cost_usd": 0.0,
+      "misses@3": [
+        "q26",
+        "dm02"
+      ]
+    },
+    {
+      "method": "hybrid_rrf",
+      "config": "RRF k=60 over dense top-20 + BM25 top-20, strategy B",
+      "N_answerable": 27,
+      "hit@1": {
+        "n": 19,
+        "N": 27,
+        "rate": 0.704
+      },
+      "evidence_hit@3": {
+        "n": 25,
+        "N": 27,
+        "rate": 0.926
+      },
+      "hit@5": {
+        "n": 25,
+        "N": 27,
+        "rate": 0.926
+      },
+      "hit@10": {
+        "n": 26,
+        "N": 27,
+        "rate": 0.963
+      },
+      "mrr@10": 0.809,
+      "context_evidence_rate": {
+        "n": 24,
+        "N": 27,
+        "rate": 0.889
+      },
+      "multi_hop_groups_covered@3": {
+        "n": 3,
+        "N": 4
+      },
+      "avg_context_chars": 2918.6,
+      "questions_with_chunk_dropped_by_budget": 5,
+      "latency_ms": {
+        "median": 60.2,
+        "p90": 71.0
+      },
+      "cost_usd": 0.0,
+      "misses@3": [
+        "q19",
+        "dm01"
+      ]
+    }
+  ]
+}

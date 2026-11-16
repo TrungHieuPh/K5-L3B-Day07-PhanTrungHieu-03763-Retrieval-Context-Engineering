@@ -1,0 +1,32 @@
+{
+  "split": "test",
+  "cases": 12,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 12,
+    "N": 12
+  },
+  "grounded_answer": {
+    "0": 1,
+    "1": 0,
+    "2": 8,
+    "N": 9,
+    "mean": 1.7777777777777777
+  },
+  "citation_validity": {
+    "n": 10,
+    "N": 11
+  },
+  "answer_citation_coverage": {
+    "n": 9,
+    "N": 9
+  },
+  "abstention": {
+    "n": 3,
+    "N": 3
+  },
+  "false_abstention": {
+    "n": 0,
+    "N": 9
+  }
+}
